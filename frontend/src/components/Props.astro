@@ -8,8 +8,8 @@
             <div class="filter-buttons">
               <button class="filter-button-active" tabindex="0">Todo</button>
               <button class="filter-button" tabindex="0">Venta</button>
+              <button class="filter-button" tabindex="0">Alquiler</button>
             </div>
-            <button class="filter-button" tabindex="0">Alquiler</button>
           </nav>
         </header>
         <p class="featured-properties-description">
@@ -76,7 +76,11 @@
     .featured-properties {
   border-radius: 0;
   display: flex;
+  width: 100%;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
 }
 
 .featured-properties-content {
@@ -85,7 +89,7 @@
   width: 100%;
   flex-direction: column;
   align-items: center;
-  padding: 70px 0px 220px;
+  padding: 70px 0px 220px 0px;
 }
 
 @media (max-width: 991px) {

@@ -1,3 +1,8 @@
+---
+import { Image } from "astro:assets";
+import newsletter from "../assets/botonnewsletter.png";
+---
+
 <section class="contact">
     <div class="contact-content">
       <div class="contact-wrapper">
@@ -21,15 +26,15 @@
         <nav class="quick-links">
           <h2 class="links-title">Quick Links</h2>
           <ul class="links-list">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Listings</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Blogs</a></li>
-            <li><a href="#">Become a Agent</a></li>
+            <li><a href="http://localhost:4321/index.html">Inicio</a></li>
+            <li><a href="#">Nosotros</a></li>
+            <li><a href="#">Propiedades Destacadas</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Testimonios</a></li>
+            <li><a href="#">Contacto</a></li>
           </ul>
         </nav>
-        <section class="discovery">
+        <!-- <section class="discovery">
           <h2 class="discovery-title">Discovery</h2>
           <ul class="discovery-list">
             <li>Canada</li>
@@ -38,18 +43,27 @@
             <li>Africa</li>
             <li>India</li>
           </ul>
-        </section>
+        </section> -->
         <section class="newsletter">
           <h2 class="newsletter-title">Subscribite a <br /> nuestro Newsletter!</h2>
           <form class="newsletter-form">
             <label for="email-input" class="visually-hidden">Ingresar Email</label>
             <input type="email" id="email-input" class="newsletter-input" placeholder="Ingresar Email" aria-label="Ingresar Email" />
             <button type="submit" class="newsletter-submit">
-              <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/ee3fb340798ae0efb72fbc5ad7cde39c2bb35c97c958de58405e4b73bb58c681?placeholderIfAbsent=true&apiKey=14edc26cd1c84e4e82050b69a6d44df8" alt="Submit" />
+              <Image
+              src={newsletter}
+              alt="Submit"
+            />
             </button>
           </form>
-          <h3 class="social-media-title">Nuestras Redes</h3>
-          <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/f416cdf7043116fc8adca29304501604f8bed6e5c07a382c037de70b4996490d?placeholderIfAbsent=true&apiKey=14edc26cd1c84e4e82050b69a6d44df8" class="social-media-icons" alt="Social media icons" />
+          <div class="social-container">
+            <div class="left-social">
+              <h3 class="social-media-title">Nuestras Redes</h3>
+            </div>
+            <div class="right-social">
+              <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/f416cdf7043116fc8adca29304501604f8bed6e5c07a382c037de70b4996490d?placeholderIfAbsent=true&apiKey=14edc26cd1c84e4e82050b69a6d44df8" class="social-media-icons" alt="Social media icons" />
+            </div>
+          </div>
         </section>
       </div>
     </div>
@@ -68,7 +82,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 89px 70px;
+  padding: 60px 0px;
 }
 
 @media (max-width: 991px) {
@@ -83,9 +97,9 @@
   width: 100%;
   max-width: 1127px;
   align-items: flex-start;
-  gap: 20px;
+  gap: 100px;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: start;
 }
 
 @media (max-width: 991px) {
@@ -129,7 +143,7 @@
 
 .contact-info {
   display: flex;
-  margin-top: 21px;
+  margin-top: 0px;
   width: 100%;
   padding-left: 7px;
   flex-direction: column;
@@ -140,13 +154,15 @@
 }
 
 .address {
-  leading-trim: both;
-  text-edge: cap;
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  gap: 8px;
 }
 
 .phone-container {
   display: flex;
-  margin-top: 50px;
+  margin-top: 20px;
   gap: 8px;
 }
 
@@ -171,8 +187,9 @@
 
 .email-container {
   align-self: stretch;
+  align-items: baseline;
   display: flex;
-  margin-top: 30px;
+  margin-top: 0px;
   gap: 10px;
   white-space: nowrap;
 }
@@ -191,16 +208,16 @@
 }
 
 .email-address {
-  leading-trim: both;
-  text-edge: cap;
-  flex-grow: 1;
-  width: 200px;
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  gap: 8px;
 }
 
 .quick-links {
-  align-self: end;
+  align-self: start;
   display: flex;
-  margin-top: 21px;
+  margin-top: 0px;
   flex-direction: column;
 }
 
@@ -211,6 +228,7 @@
   font-size: 19px;
   font-weight: 500;
   align-self: start;
+  margin-top: 0px;
 }
 
 .links-list {
@@ -220,10 +238,10 @@
   font-size: 16px;
   font-weight: 400;
   line-height: 26px;
-  margin-top: 40px;
+  margin-top: 10px;
 }
 
-.discovery {
+/* .discovery {
   display: flex;
   flex-direction: column;
   margin: auto 0;
@@ -246,12 +264,12 @@
   font-weight: 400;
   line-height: 26px;
   margin-top: 40px;
-}
+} */
 
 .newsletter {
   align-self: end;
   display: flex;
-  margin-top: 21px;
+ /*  margin-top: 21px; */
   flex-direction: column;
   align-items: start;
   font-size: 19px;
@@ -260,9 +278,11 @@
 }
 
 .newsletter-title {
-  leading-trim: both;
-  text-edge: cap;
-  width: 254px;
+  /* leading-trim: both; */    /* Nombre de la propiedad desconocido */
+/*   text-edge: cap; */    /* Nombre de la propiedad desconocido */
+  width: 90%;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 .newsletter-form {
@@ -271,23 +291,28 @@
   box-shadow: 4px 10px 20px rgba(0, 0, 0, 0.05);
   align-self: stretch;
   display: flex;
-  margin-top: 21px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   gap: 20px;
   font-size: 16px;
   color: var(--Text-Colour-4, #aaa);
   font-weight: 400;
   line-height: 2;
   justify-content: space-between;
-  padding: 5px 5px 5px 20px;
+  padding: 5px 20px 5px 20px;
 }
 
 .newsletter-input {
   leading-trim: both;
   text-edge: cap;
+  height: 30px;
   margin: auto 0;
-  border: none;
   background: transparent;
   flex-grow: 1;
+}
+
+.visually-hidden {
+  padding-top: 10px;
 }
 
 .newsletter-submit {
@@ -300,10 +325,24 @@
   cursor: pointer;
 }
 
+.social-container {
+    display: flex;
+    gap: 20px;
+  }
+  .left-social {
+    width: 80%;
+  }
+  .right-social {
+    width: 20%;
+    /* position: relative; */
+    /* box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2); */
+    /*  border-radius: 30px; */
+  }
+
 .social-media-title {
   leading-trim: both;
   text-edge: cap;
-  margin-top: 32px;
+  margin-top: 10px;
 }
 
 .social-media-icons {
@@ -311,6 +350,6 @@
   object-fit: contain;
   object-position: center;
   width: 96px;
-  margin-top: 30px;
+  margin-top: 10px;
 }
   </style>

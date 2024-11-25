@@ -4,6 +4,9 @@ interface Props {
 }
 
 const { title } = Astro.props;
+
+import { Picture } from 'astro:assets';
+import logosolo from '../assets/LogoSolo.png';
 ---
 
 <header class="header-container">
@@ -16,12 +19,13 @@ const { title } = Astro.props;
       <a href="#" class="nav-item">Contacto</a>
     </nav>
     <div class="logo-container">
-      <img
+    <!--   <img
         loading="lazy"
-        src="https://cdn.builder.io/api/v1/image/assets/TEMP/d703cc96af2f5bee89efb778a200bd2f99b8101fad12d1f368467167dd35a448?placeholderIfAbsent=true&apiKey=14edc26cd1c84e4e82050b69a6d44df8"
+        src="../assets/logoburbujaarriba.png"
         class="logo-image"
         alt="Coceres Propiedades logo"
-      />
+      /> -->
+      <Picture src={logosolo}  formats={['avif', 'webp', 'png']} alt="Coceres Propiedades Logo" class="logo-image" />
       <h1 class="logo-text">
         COCERES <br /> PROPIEDADES
       </h1>
@@ -31,10 +35,11 @@ const { title } = Astro.props;
 
 <style>
     .header-container {
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   font-family: Assistant, sans-serif;
   white-space: nowrap;
+  margin-top: -1;
 }
 
 .header-content {
@@ -75,6 +80,7 @@ const { title } = Astro.props;
   object-fit: contain;
   object-position: center;
   width: 64px;
+  height: 64px;
 }
 
 .logo-text {
