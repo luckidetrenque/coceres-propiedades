@@ -3,8 +3,8 @@ import { Picture } from "astro:assets";
 import logoburbujaarriba from "../assets/logoburbujaarriba.png";
 ---
 
-<section class="property-search">
-  <div class="search-container">
+<section id="hero" class="property-search">
+  <div class="wrapper">
     <div class="left-column">
       <div class="company-info">
         <h1 class="company-name">COCERES PROPIEDADES</h1>
@@ -108,6 +108,12 @@ import logoburbujaarriba from "../assets/logoburbujaarriba.png";
     border: 0;
   }
 
+  .wrapper {
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  margin: 16px auto 0;
+}
   .property-search {
     border-radius: 0 0 800px 800px;
     padding: 30px 76px 0px;

@@ -10,22 +10,16 @@ import logosolo from '../assets/LogoSolo.png';
 ---
 
 <header class="header-container">
-  <div class="header-content">
+  <div class="wrapper">
     <nav class="nav-menu">
-      <a href="#" class="nav-item nav-item-active">Inicio</a>
+      <a href="#hero" class="nav-item nav-item-active">Inicio</a>
       <a href="#" class="nav-item">Nosotros</a>
       <a href="#" class="nav-item">Servicios</a>
       <a href="#" class="nav-item">Propiedades</a>
       <a href="#" class="nav-item">Contacto</a>
     </nav>
     <div class="logo-container">
-    <!--   <img
-        loading="lazy"
-        src="../assets/logoburbujaarriba.png"
-        class="logo-image"
-        alt="Coceres Propiedades logo"
-      /> -->
-      <Picture src={logosolo}  formats={['avif', 'webp', 'png']} alt="Coceres Propiedades Logo" class="logo-image" />
+      <Picture src={logosolo} formats={['avif', 'webp', 'png']} alt="Coceres Propiedades Logo" class="logo-image" />
       <h1 class="logo-text">
         COCERES <br /> PROPIEDADES
       </h1>
@@ -34,20 +28,16 @@ import logosolo from '../assets/LogoSolo.png';
 </header>
 
 <style>
-    .header-container {
-  /* display: flex; */
-  flex-direction: column;
+.header-container {
   font-family: Assistant, sans-serif;
   white-space: nowrap;
-  margin-top: -1;
 }
 
-.header-content {
-  background: #fff;
+.wrapper {
+  max-width: 1200px;
   display: flex;
-  width: ;
   justify-content: space-between;
-  padding: 11px 80px 5px;
+  margin: 16px auto 0;
 }
 
 .nav-menu {
@@ -62,6 +52,7 @@ import logosolo from '../assets/LogoSolo.png';
 .nav-item {
   border-radius: 30px;
   padding: 13px 16px;
+  text-decoration: none;
 }
 
 .nav-item-active {
