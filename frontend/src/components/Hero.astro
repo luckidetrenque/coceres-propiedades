@@ -5,94 +5,84 @@ import logoburbujaarriba from "../assets/logoburbujaarriba.png";
 
 <section id="hero" class="property-search">
   <div class="wrapper">
-    <div class="left-column">
-      <div class="company-info">
-        <h1 class="company-name">COCERES PROPIEDADES</h1>
-        <h2 class="main-heading">Encontrá el lugar que soñabas...</h2>
-        <div class="foto-container">
-          <div class="foto-left-column">
-            <Picture
-              src={logoburbujaarriba}
-              formats={["png"]}
-              alt=""
-              class="featured-image"
-            />
+    <div>
+      <h1 class="company-name">COCERES PROPIEDADES</h1>
+      <div class="hero-container">
+        <div class="left-column">
+          <div class="company-info">
+            <h2 class="main-heading">Encontrá el lugar <br> que soñabas...</h2>
+            <div class="foto-container">
+              <div class="foto-left-column">
+                <Picture
+                  src={logoburbujaarriba}
+                  formats={["png"]}
+                  alt=""
+                  class="featured-image"
+                />
+              </div>
+              <div class="foto-right-column">
+                <div id="circulo" class="circle-logo"></div>
+              </div>
+            </div>
           </div>
-          <div class="foto-right-column">
-            <div id="circulo" class="circle-logo"></div>
-          </div>
+        </div>
+        <div class="right-column">
+          <form class="search-form">
+            <div class="form-header">
+              <div class="toggle-container">
+                <span class="toggle-active">Venta</span>
+                <span class="toggle-inactive">Alquiler</span>
+              </div>
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/fe22f7308897f61bc51f89ffb84d5ab29e0500a901d536f8226ac0d739fa22d7?placeholderIfAbsent=true&apiKey=14edc26cd1c84e4e82050b69a6d44df8"
+                alt=""
+                class="toggle-indicator"
+              />
+            </div>
+              <div class="form-body">
+                <div class="dropdown-container">
+                  <label for="location" class="visually-hidden">Localidad
+                  </label>
+                  <select id="localidad" class="form-input">
+                  <option value="">Localidad</option>
+                  </select>
+                </div>
+                <div class="dropdown-container">
+                  <label for="property-type" class="visually-hidden">Tipo de Inmueble
+                  </label>
+                  <select id="property-type" class="form-input">
+                  <option value="">Tipo de Inmueble</option>
+                  </select>
+                </div>
+                <div class="dropdown-container">
+                  <label for="rooms" class="visually-hidden">Habitaciones
+                  </label>
+                  <select id="rooms" class="form-input">
+                    <option value="">Habitaciones</option>
+                  </select>
+                </div>
+                <div class="advanced-search">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/5ccef6713e24869b2c0953efdd964359aa21f21da0e4063f11c863ba4fe3b830?placeholderIfAbsent=true&apiKey=14edc26cd1c84e4e82050b69a6d44df8"
+                    alt=""
+                    class="search-icon"
+                  />
+                  <span>Busqueda Avanzada</span>
+                </div>
+                <button type="submit" class="search-button">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/3b08d3c1c79ce9002470e2603f1d016dd8a0312ac6a923dbf6f260a19b1b152c?placeholderIfAbsent=true&apiKey=14edc26cd1c84e4e82050b69a6d44df8"
+                    alt=""
+                    class="search-icon"
+                  />
+                  <span>Buscar</span>
+                </button>
+            </div>
+          </form>
         </div>
       </div>
-    </div>
-    <div class="right-column">
-      <form class="search-form">
-        <div class="form-header">
-          <div class="toggle-container">
-            <span class="toggle-active">Venta</span>
-            <span class="toggle-inactive">Alquiler</span>
-          </div>
-          <img
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/fe22f7308897f61bc51f89ffb84d5ab29e0500a901d536f8226ac0d739fa22d7?placeholderIfAbsent=true&apiKey=14edc26cd1c84e4e82050b69a6d44df8"
-            alt=""
-            class="toggle-indicator"
-          />
-        </div>
-        <div class="form-body">
-          <label for="location" class="visually-hidden">Localidad</label>
-          <input
-            type="text"
-            id="location"
-            class="form-input"
-            placeholder="Localidad"
-          />
-
-          <div class="dropdown-container">
-            <label for="property-type" class="visually-hidden"
-              >Tipo de Inmueble</label
-            >
-            <select id="property-type" class="form-input">
-              <option value="">Tipo de Inmueble</option>
-            </select>
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/06baaeb140c7abbf649d12d1096dc155ef89b500e24cd188c150b63fe4897b69?placeholderIfAbsent=true&apiKey=14edc26cd1c84e4e82050b69a6d44df8"
-              alt=""
-              class="dropdown-icon"
-            />
-          </div>
-
-          <div class="dropdown-container">
-            <label for="rooms" class="visually-hidden">Habitaciones</label>
-            <select id="rooms" class="form-input">
-              <option value="">Habitaciones</option>
-            </select>
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/06baaeb140c7abbf649d12d1096dc155ef89b500e24cd188c150b63fe4897b69?placeholderIfAbsent=true&apiKey=14edc26cd1c84e4e82050b69a6d44df8"
-              alt=""
-              class="dropdown-icon"
-            />
-          </div>
-
-          <div class="advanced-search">
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/5ccef6713e24869b2c0953efdd964359aa21f21da0e4063f11c863ba4fe3b830?placeholderIfAbsent=true&apiKey=14edc26cd1c84e4e82050b69a6d44df8"
-              alt=""
-              class="search-icon"
-            />
-            <span>Busqueda Avanzada</span>
-          </div>
-
-          <button type="submit" class="search-button">
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/3b08d3c1c79ce9002470e2603f1d016dd8a0312ac6a923dbf6f260a19b1b152c?placeholderIfAbsent=true&apiKey=14edc26cd1c84e4e82050b69a6d44df8"
-              alt=""
-              class="search-icon"
-            />
-            <span>Buscar</span>
-          </button>
-        </div>
-      </form>
-    </div>
   </div>
+</div>
 </section>
 
 <style>
@@ -114,9 +104,16 @@ import logoburbujaarriba from "../assets/logoburbujaarriba.png";
   justify-content: space-between;
   margin: 16px auto 0;
 }
+
+  .hero-container{
+    display: flex;
+
+  }
+
   .property-search {
     border-radius: 0 0 800px 800px;
     padding: 30px 76px 0px;
+
   }
 
   .property-search::before {
@@ -163,8 +160,9 @@ import logoburbujaarriba from "../assets/logoburbujaarriba.png";
     color: #4361ee;
     letter-spacing: 2.91px;
     font:
-      19px Assistant,
+      30px Assistant,
       sans-serif;
+    text-align: center;
   }
 
   .main-heading {
@@ -174,6 +172,7 @@ import logoburbujaarriba from "../assets/logoburbujaarriba.png";
     font:
       40px/40px Poppins,
       sans-serif;
+    text-align: justify;
   }
 
   .foto-container {
@@ -228,7 +227,6 @@ import logoburbujaarriba from "../assets/logoburbujaarriba.png";
     width: 40%;
     /* box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2); */
     border-radius: 30px;
-    padding-top: 30px;
   }
 
   .search-form {
