@@ -5,97 +5,182 @@ interface Props {
 
 const { title } = Astro.props;
 
-import { Picture } from 'astro:assets';
-import logosolo from '../assets/LogoSolo.png';
+import { Picture } from "astro:assets";
+import logosolo from "../assets/LogoSolo.png";
+import logoburbujaarriba from "../assets/logoburbujaarriba.png";
 ---
 
-<header class="header-container">
-  <div class="wrapper">
-    <nav class="nav-menu">
-      <a href="#hero" class="nav-item nav-item-active">Inicio</a>
-      <a href="#" class="nav-item">Nosotros</a>
-      <a href="#" class="nav-item">Servicios</a>
-      <a href="#" class="nav-item">Propiedades</a>
-      <a href="#" class="nav-item">Contacto</a>
-    </nav>
-    <div class="logo-container">
-      <Picture src={logosolo} formats={['avif', 'webp', 'png']} alt="Coceres Propiedades Logo" class="logo-image" />
-      <h1 class="logo-text">
-        COCERES <br /> PROPIEDADES
-      </h1>
+<header class="sticky top-0 w-full bg-sky-400 z-50 shadow-md">
+  <div class="max-w-[1200px] mx-auto px-4 py-4 flex items-center justify-between">
+    <!-- Logo -->
+    <div class="flex-shrink-0">
+      <a href="/" class="text-white font-bold text-xl">
+              <Picture
+        src={logoburbujaarriba}
+        formats={["png"]}
+        alt=""
+        class="featured-image"
+        width={80}
+      />
+      </a>
+      <!-- Si tienes una imagen de logo, reemplaza con: -->
+      <!-- <img src="/logo.png" alt="Logo" class="h-8 w-auto"> -->
     </div>
+
+    <!-- Menú de navegación -->
+    <nav class="hidden md:flex">
+      <ul class="flex space-x-8">
+        <li>
+          <a href="/" class="text-white hover:text-sky-100 transition-colors duration-200 font-medium">
+            Inicio
+          </a>
+        </li>
+        <li>
+          <a href="/nosotros" class="text-white hover:text-sky-100 transition-colors duration-200 font-medium">
+            Nosotros
+          </a>
+        </li>
+        <li>
+          <a href="/servicios" class="text-white hover:text-sky-100 transition-colors duration-200 font-medium">
+            Servicios
+          </a>
+        </li>
+        <li>
+          <a href="/propiedades" class="text-white hover:text-sky-100 transition-colors duration-200 font-medium">
+            Propiedades
+          </a>
+        </li>
+        <li>
+          <a href="/contacto" class="text-white hover:text-sky-100 transition-colors duration-200 font-medium">
+            Contacto
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Botón hamburguesa para móviles -->
+    <button id="mobile-menu-button" class="md:hidden text-white p-2">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
   </div>
+
+  <!-- Menú móvil -->
+  <nav id="mobile-menu" class="md:hidden bg-sky-500 hidden">
+    <ul class="px-4 py-2 space-y-2">
+      <li>
+        <a href="/" class="block text-white hover:text-sky-100 py-2 transition-colors duration-200">
+          Inicio
+        </a>
+      </li>
+      <li>
+        <a href="/nosotros" class="block text-white hover:text-sky-100 py-2 transition-colors duration-200">
+          Nosotros
+        </a>
+      </li>
+      <li>
+        <a href="/servicios" class="block text-white hover:text-sky-100 py-2 transition-colors duration-200">
+          Servicios
+        </a>
+      </li>
+      <li>
+        <a href="/propiedades" class="block text-white hover:text-sky-100 py-2 transition-colors duration-200">
+          Propiedades
+        </a>
+      </li>
+      <li>
+        <a href="/contacto" class="block text-white hover:text-sky-100 py-2 transition-colors duration-200">
+          Contacto
+        </a>
+      </li>
+    </ul>
+  </nav>
 </header>
 
+<script>
+  // Funcionalidad del menú móvil
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  mobileMenuButton?.addEventListener('click', () => {
+    mobileMenu?.classList.toggle('hidden');
+  });
+</script>
 <style>
-.header-container {
-  font-family: Assistant, sans-serif;
-  white-space: nowrap;
-}
-
-.wrapper {
-  max-width: 1200px;
-  display: flex;
-  justify-content: space-between;
-  margin: 16px auto 0;
-}
-
-.nav-menu {
-  display: flex;
-  align-items: start;
-  font-size: 16px;
-  color: #2b2b2b;
-  font-weight: 300;
-  margin: auto 0;
-}
-
-.nav-item {
-  border-radius: 30px;
-  padding: 13px 16px;
-  text-decoration: none;
-}
-
-.nav-item-active {
-  background-color: rgba(67, 97, 238, 0.3);
-}
-
-.logo-container {
-  display: flex;
-  font-size: 20px;
-  color: #1e1e1e;
-  font-weight: 600;
-}
-
-.logo-image {
-  aspect-ratio: 1;
-  object-fit: contain;
-  object-position: center;
-  width: 64px;
-  height: 64px;
-}
-
-.logo-text {
-  margin: auto 0;
-  font-size: 18px;
-}
-
-@media (max-width: 991px) {
   .header-container {
-    white-space: initial;
+    font-family: Assistant, sans-serif;
+    white-space: nowrap;
+    position: fixed;
+    width: 100%;
+    top: 0;
   }
 
-  .header-content {
-    max-width: 100%;
-    padding: 0 20px;
+  .wrapper {
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 32px;
+    margin: 16px auto 0;
   }
 
   .nav-menu {
-    max-width: 100%;
-    white-space: initial;
+    display: flex;
+    align-items: start;
+    font-size: 16px;
+    color: #2b2b2b;
+    font-weight: 300;
+    margin: auto 0;
   }
 
   .nav-item {
-    white-space: initial;
+    border-radius: 30px;
+    padding: 13px 16px;
+    text-decoration: none;
   }
-}
+
+  .nav-item-active {
+    background-color: rgba(67, 97, 238, 0.3);
+  }
+
+  .logo-container {
+    display: flex;
+    font-size: 20px;
+    color: #1e1e1e;
+    font-weight: 600;
+  }
+
+  .logo-image {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 64px;
+    height: 64px;
+  }
+
+  .logo-text {
+    margin: auto 0;
+    font-size: 18px;
+  }
+
+  @media (max-width: 991px) {
+    .header-container {
+      white-space: initial;
+    }
+
+    .header-content {
+      max-width: 100%;
+      padding: 0 20px;
+    }
+
+    .nav-menu {
+      max-width: 100%;
+      white-space: initial;
+    }
+
+    .nav-item {
+      white-space: initial;
+    }
+  }
 </style>

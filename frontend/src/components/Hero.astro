@@ -3,413 +3,157 @@ import { Picture } from "astro:assets";
 import logoburbujaarriba from "../assets/logoburbujaarriba.png";
 ---
 
-<section id="hero" class="property-search">
-  <div class="wrapper">
-    <div>
-      <h1 class="company-name">COCERES PROPIEDADES</h1>
-      <div class="hero-container">
-        <div class="left-column">
-          <div class="company-info">
-            <h2 class="main-heading">Encontrá el lugar <br> que soñabas...</h2>
-            <div class="foto-container">
-              <div class="foto-left-column">
-                <Picture
-                  src={logoburbujaarriba}
-                  formats={["png"]}
-                  alt=""
-                  class="featured-image"
-                />
-              </div>
-              <div class="foto-right-column">
-                <div id="circulo" class="circle-logo"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="right-column">
-          <form class="search-form">
-            <div class="form-header">
-              <div class="toggle-container">
-                <span class="toggle-active">Venta</span>
-                <span class="toggle-inactive">Alquiler</span>
-              </div>
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/fe22f7308897f61bc51f89ffb84d5ab29e0500a901d536f8226ac0d739fa22d7?placeholderIfAbsent=true&apiKey=14edc26cd1c84e4e82050b69a6d44df8"
-                alt=""
-                class="toggle-indicator"
-              />
-            </div>
-              <div class="form-body">
-                <div class="dropdown-container">
-                  <label for="location" class="visually-hidden">Localidad
-                  </label>
-                  <select id="localidad" class="form-input">
-                  <option value="">Localidad</option>
-                  </select>
-                </div>
-                <div class="dropdown-container">
-                  <label for="property-type" class="visually-hidden">Tipo de Inmueble
-                  </label>
-                  <select id="property-type" class="form-input">
-                  <option value="">Tipo de Inmueble</option>
-                  </select>
-                </div>
-                <div class="dropdown-container">
-                  <label for="rooms" class="visually-hidden">Habitaciones
-                  </label>
-                  <select id="rooms" class="form-input">
-                    <option value="">Habitaciones</option>
-                  </select>
-                </div>
-                <div class="advanced-search">
-                  <img
-                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/5ccef6713e24869b2c0953efdd964359aa21f21da0e4063f11c863ba4fe3b830?placeholderIfAbsent=true&apiKey=14edc26cd1c84e4e82050b69a6d44df8"
-                    alt=""
-                    class="search-icon"
-                  />
-                  <span>Busqueda Avanzada</span>
-                </div>
-                <button type="submit" class="search-button">
-                  <img
-                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/3b08d3c1c79ce9002470e2603f1d016dd8a0312ac6a923dbf6f260a19b1b152c?placeholderIfAbsent=true&apiKey=14edc26cd1c84e4e82050b69a6d44df8"
-                    alt=""
-                    class="search-icon"
-                  />
-                  <span>Buscar</span>
-                </button>
-            </div>
-          </form>
-        </div>
-      </div>
+<section class="relative w-full h-[75vh] overflow-hidden">
+  <!-- Slider de imágenes de fondo -->
+  <div class="absolute inset-0 w-full h-full">
+    <!-- Imagen 1 -->
+    <div class="hero-slide absolute inset-0 w-full h-full opacity-0 transition-opacity duration-1000">
+      <img 
+        src="https://picsum.photos/1200/400" 
+        alt="Propiedad 1" 
+        class="w-full h-full object-cover opacity-50"
+      />
+    </div>
+    
+    <!-- Imagen 2 -->
+    <div class="hero-slide absolute inset-0 w-full h-full opacity-0 transition-opacity duration-1000">
+      <img 
+        src="https://picsum.photos/1200/400" 
+        alt="Propiedad 2" 
+        class="w-full h-full object-cover opacity-50"
+      />
+    </div>
+    
+    <!-- Imagen 3 -->
+    <div class="hero-slide absolute inset-0 w-full h-full opacity-0 transition-opacity duration-1000">
+      <img 
+        src="https://picsum.photos/1200/400" 
+        alt="Propiedad 3" 
+        class="w-full h-full object-cover opacity-50"
+      />
+    </div>
+
+    <!-- Overlay adicional para mejor legibilidad del texto -->
+    <div class="absolute inset-0 bg-black bg-opacity-20"></div>
   </div>
-</div>
+
+  <!-- Contenido del hero -->
+  <div class="relative z-10 max-w-[1200px] mx-auto px-4 h-full flex items-center justify-center">
+    <div class="text-white">
+      <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-4">
+        Coceres Propiedades
+        <span class="block text-xl md:text-2xl lg:text-3xl font-light mt-2 text-sky-200">
+          Encontrá el lugar que soñabas...
+        </span>
+      </h1>
+    </div>
+  </div>
+
+  <!-- Indicadores del slider -->
+  <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
+    <div class="flex space-x-2">
+      <button class="slider-dot w-3 h-3 rounded-full bg-white bg-opacity-50 transition-all duration-300" data-slide="0"></button>
+      <button class="slider-dot w-3 h-3 rounded-full bg-white bg-opacity-50 transition-all duration-300" data-slide="1"></button>
+      <button class="slider-dot w-3 h-3 rounded-full bg-white bg-opacity-50 transition-all duration-300" data-slide="2"></button>
+    </div>
+  </div>
+
+  <!-- Flechas de navegación -->
+  <button class="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 text-white bg-black bg-opacity-30 hover:bg-opacity-50 p-2 rounded-full transition-all duration-300" id="prev-slide">
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+    </svg>
+  </button>
+  
+  <button class="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 text-white bg-black bg-opacity-30 hover:bg-opacity-50 p-2 rounded-full transition-all duration-300" id="next-slide">
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+    </svg>
+  </button>
 </section>
 
-<style>
-  .visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
-  }
-
-  .wrapper {
-  max-width: 1200px;
-  display: flex;
-  justify-content: space-between;
-  margin: 16px auto 0;
-}
-
-  .hero-container{
-    display: flex;
-
-  }
-
-  .property-search {
-    border-radius: 0 0 800px 800px;
-    padding: 30px 76px 0px;
-
-  }
-
-  .property-search::before {
-    content: "";
-    position: absolute;
-    top: -50%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-      to bottom,
-      #ffffff,
-      #ffffff,
-      #ffffff,
-      #ffffff,
-      #fbfcfe,
-      #f5f9fd,
-      #eef7fa,
-      #e8f5f5
-    );
-    border-radius: 0 0 800px 800px;
-    z-index: -1;
-    padding-bottom: 300px;
-  }
-
-  .search-container {
-    display: flex;
-    gap: 20px;
-  }
-
-  .left-column {
-    width: 60%;
-  }
-
-  .company-info {
-    display: flex;
-    flex-direction: column;
-    font-weight: 600;
-    padding: 0 0px;
-  }
-
-  .company-name {
-    color: #4361ee;
-    letter-spacing: 2.91px;
-    font:
-      30px Assistant,
-      sans-serif;
-    text-align: center;
-  }
-
-  .main-heading {
-    color: #0b090a;
-    margin-top: 19px;
-    margin-bottom: 19px;
-    font:
-      40px/40px Poppins,
-      sans-serif;
-    text-align: justify;
-  }
-
-  .foto-container {
-    display: flex;
-    gap: 20px;
-  }
-  .foto-left-column {
-    width: 70%;
-  }
-  .foto-right-column {
-    width: 30%;
-    position: relative;
-    /* box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2); */
-    /*  border-radius: 30px; */
-  }
-
-  .featured-image {
-    width: 95%; /* O ajusta según el diseño */
-    height: auto; /* Ajusta automáticamente la altura manteniendo la proporción */
-    object-fit: contain; /* O utiliza "cover" si prefieres que se recorte en lugar de ajustarse */
-    border-radius: 20px;
-    filter: drop-shadow(10px 10px 4px rgba(0, 0, 0, 0.2));
+<script>
+  class HeroSlider {
+    currentSlide: number;
+    slides: NodeListOf<Element>;
+    dots: NodeListOf<Element>;
+    prevBtn: HTMLElement | null;
+    nextBtn: HTMLElement | null;
+    constructor() {
+      this.currentSlide = 0;
+      this.slides = document.querySelectorAll('.hero-slide');
+      this.dots = document.querySelectorAll('.slider-dot');
+      this.prevBtn = document.getElementById('prev-slide');
+      this.nextBtn = document.getElementById('next-slide');
+      
+      this.init();
     }
 
-  .circle-logo {
-    border-radius: 50%;
-    /* display: inline-block; */
-    /* margin-right: 20px; */
-  }
-
-  #circulo {
-    width: 200px;
-
-    height: 200px;
-
-    background: linear-gradient(
-      to left bottom,
-      #4865ee,
-      #608bf7,
-      #84aefb,
-      #b2cffb,
-      #e5eef9
-    );
-    position: absolute;
-    top: 30%; /* Centrar verticalmente */
-    left: 20%; /* Centrar horizontalmente */
-    transform: translate(-50%, -50%) scale(0.3); /* Ajusta la posición y escala */
-    border-radius: 50%;
-  }
-
-  .right-column {
-    width: 40%;
-    /* box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2); */
-    border-radius: 30px;
-  }
-
-  .search-form {
-    border-radius: 30px;
-    background-color: #fff;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
-    /* margin-top: 35px; */
-    padding-bottom: 40px;
-    font-size: 16px;
-    width: 100%;
-  }
-
-  .form-header {
-    border-radius: 20px 20px 0 0;
-    border-bottom: 1px solid #aaa;
-    background-color: #fff;
-    padding: 40px 80px 0 40px;
-    text-align: center;
-  }
-
-  .toggle-container {
-    display: flex;
-    width: 235px;
-    max-width: 100%;
-    gap: 20px;
-    justify-content: space-between;
-    margin: 0 auto;
-  }
-
-  .toggle-active {
-    color: #0c9a9f;
-  }
-
-  .toggle-inactive {
-    color: #808080;
-  }
-
-  .toggle-indicator {
-    width: 153px;
-    stroke-width: 3px;
-    stroke: #0c9a9f;
-    margin-top: 25px;
-  }
-
-  .form-body {
-    margin-top: 40px;
-    padding: 0 40px;
-    font-family: Poppins, sans-serif;
-    font-weight: 400;
-    line-height: 2;
-  }
-
-  .form-input {
-    border-radius: 20px;
-    background-color: rgba(212, 212, 212, 0.2);
-    color: #aaa;
-    padding: 10px 0px;
-    margin-bottom: 15px;
-    width: 100%;
-  }
-
-  .dropdown-container {
-    position: relative;
-    /* margin-bottom: 30px; */
-  }
-
-  .dropdown-icon {
-    position: absolute;
-    right: 22px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 14px;
-  }
-
-  .advanced-search {
-    display: flex;
-    gap: 9px;
-    font-size: 13px;
-    color: #0c9a9f;
-    padding: 10px 10px;
-    /* margin-top: 10px;
-  margin-bottom: 10px; */
-  }
-
-  .search-button {
-    border-radius: 50px;
-    border: 1px solid #bfbdc1;
-    background-color: #0c9a9f;
-    color: #fff;
-    font-family: Assistant, sans-serif;
-    font-weight: 300;
-    padding: 10px 10px;
-    margin-top: 10px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .search-icon {
-    width: 20px;
-    margin-right: 16px;
-  }
-
-  @media (max-width: 991px) {
-    .property-search {
-      max-width: 100%;
-      padding: 100px 20px 0;
+    init() {
+      // Mostrar primera imagen
+      this.showSlide(0);
+      
+      // Auto-slider cada 5 segundos
+      this.autoSlide();
+      
+      // Event listeners
+      this.prevBtn?.addEventListener('click', () => this.prevSlide());
+      this.nextBtn?.addEventListener('click', () => this.nextSlide());
+      
+      // Dots navigation
+      this.dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => this.goToSlide(index));
+      });
     }
 
-    .search-container {
-      flex-direction: column;
+    showSlide(index: number) {
+      // Ocultar todas las imágenes
+      this.slides.forEach(slide => {
+        (slide as HTMLElement).style.opacity = '0';
+      });
+      
+      // Mostrar imagen actual
+      if (this.slides[index]) {
+        (this.slides[index] as HTMLElement).style.opacity = '1';
+      }
+      
+      // Actualizar dots
+      this.dots.forEach((dot, i) => {
+        if (i === index) {
+          dot.classList.add('bg-opacity-100');
+          dot.classList.remove('bg-opacity-50');
+        } else {
+          dot.classList.add('bg-opacity-50');
+          dot.classList.remove('bg-opacity-100');
+        }
+      });
+      
+      this.currentSlide = index;
     }
 
-    .left-column,
-    .right-column {
-      width: 100%;
+    nextSlide() {
+      const next = (this.currentSlide + 1) % this.slides.length;
+      this.showSlide(next);
     }
 
-    .company-info {
-      max-width: 100%;
-      padding: 0 20px;
+    prevSlide() {
+      const prev = this.currentSlide === 0 ? this.slides.length - 1 : this.currentSlide - 1;
+      this.showSlide(prev);
     }
 
-    .main-heading {
-      font-size: 40px;
-      line-height: 51px;
+    goToSlide(index: number) {
+      this.showSlide(index);
     }
 
-    .featured-image {
-      /*  max-width: 100%; */
-    }
-
-    .search-form {
-      margin-top: 40px;
-    }
-
-    .form-header {
-      padding: 0 20px;
-    }
-
-    .form-body {
-      padding: 0 20px;
-    }
-
-    .search-button {
-      margin-top: 40px;
-      padding: 20px;
+    autoSlide() {
+      setInterval(() => {
+        this.nextSlide();
+      }, 5000);
     }
   }
 
-  /* .about-us-section { border-radius: 0; display: flex; flex-direction: column; align-items: start; }
-.circle-logo { border-radius: 50%; display: flex; margin-left: 26px; width: 100px; height: 100px; }
-.section-title { color: #4361ee; letter-spacing: 2.91px; margin-top: 122px; font: 500 19px Poppins, sans-serif; }
-.content-wrapper { align-self: stretch; margin-top: 40px; width: 100%; }
-.two-column-layout { gap: 20px; display: flex; }
-.left-column, .right-column { display: flex; flex-direction: column; line-height: normal; width: 50%; }
-.text-content { display: flex; width: 100%; flex-direction: column; font-family: Poppins, sans-serif; }
-.main-heading { color: #2b2b2b; font-size: 40px; font-weight: 600; line-height: 47px; }
-.description { color: #808080; font-size: 16px; font-weight: 400; line-height: 26px; margin-top: 30px; }
-.feature-card { border-radius: 30px; background-color: #fff; box-shadow: 4px 10px 30px rgba(0, 0, 0, 0.06); align-self: start; display: flex; margin-top: 40px; gap: 25px; padding: 30px 70px 30px 30px; }
-.feature-icon { aspect-ratio: 1; object-fit: contain; object-position: center; width: 40px; margin: auto 0; }
-.feature-text { display: flex; flex-direction: column; }
-.feature-title { color: #4361ee; font-size: 19px; font-weight: 500; }
-.feature-description { color: #808080; font-size: 16px; font-weight: 400; line-height: 26px; margin-top: 20px; width: 274px; }
-.image-gallery { flex-grow: 1; }
-.gallery-layout { gap: 20px; display: flex; }
-.main-image { aspect-ratio: 0.56; object-fit: contain; object-position: center; width: 50%; border-radius: 30px; box-shadow: 4px 10px 30px rgba(0, 0, 0, 0.15); margin-top: 47px; flex-grow: 1; }
-.side-images { display: flex; flex-direction: column; }
-.side-image { aspect-ratio: 0.99; object-fit: contain; object-position: center; width: 100%; border-radius: 30px; box-shadow: 4px 10px 30px rgba(0, 0, 0, 0.15); }
-.side-image:last-child { aspect-ratio: 1.54; margin-top: 20px; }
-
-@media (max-width: 991px) {
-    .circle-logo { margin-left: 10px; }
-    .section-title { margin-top: 40px; }
-    .content-wrapper, .text-content, .main-heading, .description { max-width: 100%; }
-    .two-column-layout, .gallery-layout { flex-direction: column; align-items: stretch; gap: 0; }
-    .left-column, .right-column { width: 100%; }
-    .text-content { margin-top: 40px; }
-    .feature-card { padding: 0 20px; }
-    .feature-description { margin-right: 10px; }
-    .image-gallery { max-width: 100%; margin-top: 40px; }
-    .main-image { margin-top: 40px; }
-    .side-images { margin-top: 20px; }
-} */
-</style>
+  // Inicializar slider cuando cargue la página
+  document.addEventListener('DOMContentLoaded', () => {
+    new HeroSlider();
+  });
+</script>
