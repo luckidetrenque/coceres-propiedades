@@ -1,355 +1,212 @@
 ---
-import { Image } from "astro:assets";
-import newsletter from "../assets/botonnewsletter.png";
+// Contacto.astro
 ---
 
-<section class="contact">
-    <div class="contact-content">
-      <div class="contact-wrapper">
-        <section class="company-info">
-          <div class="logo-container">
-            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/d703cc96af2f5bee89efb778a200bd2f99b8101fad12d1f368467167dd35a448?placeholderIfAbsent=true&apiKey=14edc26cd1c84e4e82050b69a6d44df8" class="logo" alt="Coceres Propiedades logo" />
-            <div class="company-name">COCERES <br /> PROPIEDADES</div>
-          </div>
-          <address class="contact-info">
-            <p class="address">Calle 64 N° 750 <br /> La Plata, Buenos Aires</p>
-            <div class="phone-container">
-              <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/278017ac73adb8a012bae35035c1f1045f60778619fdbc789915376e6dad958d?placeholderIfAbsent=true&apiKey=14edc26cd1c84e4e82050b69a6d44df8" class="phone-icon" alt="" />
-              <a href="tel:+2215555555" class="phone-number">(221) 555-5555</a>
-            </div>
-            <div class="email-container">
-              <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/b786812f5e8543af032dc3bec3504895053e2b2408923c308d6f49bc2131afe6?placeholderIfAbsent=true&apiKey=14edc26cd1c84e4e82050b69a6d44df8" class="email-icon" alt="" />
-              <a href="mailto:info@cocerespropiedades.com" class="email-address">info@cocerespropiedades.com</a>
-            </div>
-          </address>
-        </section>
-        <nav class="quick-links">
-          <h2 class="links-title">Quick Links</h2>
-          <ul class="links-list">
-            <li><a href="#hero">Inicio</a></li>
-            <li><a href="#">Nosotros</a></li>
-            <li><a href="#">Propiedades Destacadas</a></li>
-            <li><a href="#">Servicios</a></li>
-            <li><a href="#">Testimonios</a></li>
-            <li><a href="#">Contacto</a></li>
-          </ul>
-        </nav>
-        <!-- <section class="discovery">
-          <h2 class="discovery-title">Discovery</h2>
-          <ul class="discovery-list">
-            <li>Canada</li>
-            <li>United States</li>
-            <li>Germany</li>
-            <li>Africa</li>
-            <li>India</li>
-          </ul>
-        </section> -->
-        <section class="newsletter">
-          <h2 class="newsletter-title">Subscribite a <br /> nuestro Newsletter!</h2>
-          <form class="newsletter-form">
-            <label for="email-input" class="visually-hidden">Ingresar Email</label>
-            <input type="email" id="email-input" class="newsletter-input" placeholder="Ingresar Email" aria-label="Ingresar Email" />
-            <button type="submit" class="newsletter-submit">
-              <Image
-              src={newsletter}
-              alt="Submit"
-            />
-            </button>
-          </form>
-          <div class="social-container">
-            <div class="left-social">
-              <h3 class="social-media-title">Nuestras Redes</h3>
-            </div>
-            <div class="right-social">
-              <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/f416cdf7043116fc8adca29304501604f8bed6e5c07a382c037de70b4996490d?placeholderIfAbsent=true&apiKey=14edc26cd1c84e4e82050b69a6d44df8" class="social-media-icons" alt="Social media icons" />
-            </div>
-          </div>
-        </section>
+<section class="py-16 bg-white">
+  <div class="max-w-[1200px] mx-auto px-4">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      
+      <!-- Columna 1: Información de contacto -->
+      <div>
+        <h2 class="text-3xl font-bold text-gray-800 mb-8">Información de contacto</h2>
+        
+        <div class="space-y-6">
+          <table class="w-full">
+            <tbody class="space-y-4">
+              <!-- Dirección -->
+              <tr class="block mb-4">
+                <td class="font-semibold text-gray-800 block pb-2">Dirección:</td>
+                <td class="text-gray-600 block">
+                  <div class="flex items-start">
+                    <svg class="w-5 h-5 mr-2 text-sky-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    </svg>
+                    <span>Av. Corrientes 1234, CABA<br>Buenos Aires, Argentina</span>
+                  </div>
+                </td>
+              </tr>
+
+              <!-- Horario -->
+              <tr class="block mb-4">
+                <td class="font-semibold text-gray-800 block pb-2">Horario:</td>
+                <td class="text-gray-600 block">
+                  <div class="flex items-start">
+                    <svg class="w-5 h-5 mr-2 text-sky-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <span>Lunes a Viernes: 9:00 - 18:00<br>Sábados: 9:00 - 13:00</span>
+                  </div>
+                </td>
+              </tr>
+
+              <!-- Teléfono -->
+              <tr class="block mb-4">
+                <td class="font-semibold text-gray-800 block pb-2">Teléfono:</td>
+                <td class="text-gray-600 block">
+                  <div class="flex items-center">
+                    <svg class="w-5 h-5 mr-2 text-sky-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                    </svg>
+                    <a href="tel:+5491123456789" class="hover:text-sky-600 transition-colors">
+                      +54 9 11 2345-6789
+                    </a>
+                  </div>
+                </td>
+              </tr>
+
+              <!-- WhatsApp -->
+              <tr class="block mb-4">
+                <td class="font-semibold text-gray-800 block pb-2">WhatsApp:</td>
+                <td class="text-gray-600 block">
+                  <div class="flex items-center">
+                    <svg class="w-5 h-5 mr-2 text-green-600 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.488"/>
+                    </svg>
+                    <a href="https://wa.me/5491123456789" target="_blank" rel="noopener" class="hover:text-green-600 transition-colors">
+                      +54 9 11 2345-6789
+                    </a>
+                  </div>
+                </td>
+              </tr>
+
+              <!-- Correo electrónico -->
+              <tr class="block mb-4">
+                <td class="font-semibold text-gray-800 block pb-2">Correo electrónico:</td>
+                <td class="text-gray-600 block">
+                  <div class="flex items-center">
+                    <svg class="w-5 h-5 mr-2 text-sky-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                    </svg>
+                    <a href="mailto:info@cocerespropiedades.com" class="hover:text-sky-600 transition-colors">
+                      info@cocerespropiedades.com
+                    </a>
+                  </div>
+                </td>
+              </tr>
+
+              <!-- Redes sociales -->
+              <tr class="block mb-4">
+                <td class="font-semibold text-gray-800 block pb-2">Redes sociales:</td>
+                <td class="text-gray-600 block">
+                  <div class="flex space-x-4">
+                    <!-- Facebook -->
+                    <a href="https://facebook.com/cocerespropiedades" target="_blank" rel="noopener" class="text-blue-600 hover:text-blue-700 transition-colors">
+                      <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                      </svg>
+                    </a>
+                    
+                    <!-- Instagram -->
+                    <a href="https://instagram.com/cocerespropiedades" target="_blank" rel="noopener" class="text-pink-600 hover:text-pink-700 transition-colors">
+                      <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                      </svg>
+                    </a>
+                    
+                    <!-- Twitter -->
+                    <a href="https://twitter.com/coceresprop" target="_blank" rel="noopener" class="text-blue-400 hover:text-blue-500 transition-colors">
+                      <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                      </svg>
+                    </a>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Columna 2: Formulario de contacto -->
+      <div>
+        <h2 class="text-3xl font-bold text-gray-800 mb-8">Contáctenos</h2>
+        
+        <form class="space-y-6" id="contact-form">
+          <!-- Nombre completo -->
+          <input 
+            type="text" 
+            name="nombre"
+            placeholder="Nombre completo *"
+            required
+            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-colors"
+          />
+
+          <!-- Correo electrónico -->
+          <input 
+            type="email" 
+            name="email"
+            placeholder="Correo electrónico *"
+            required
+            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-colors"
+          />
+
+          <!-- Teléfono -->
+          <input 
+            type="tel" 
+            name="telefono"
+            placeholder="Teléfono"
+            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-colors"
+          />
+
+          <!-- Asunto -->
+          <input 
+            type="text" 
+            name="asunto"
+            placeholder="Asunto *"
+            required
+            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-colors"
+          />
+
+          <!-- Mensaje -->
+          <textarea 
+            name="mensaje"
+            placeholder="Mensaje *"
+            required
+            rows="5"
+            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-colors resize-vertical"
+          ></textarea>
+
+          <!-- Texto de datos requeridos -->
+          <p class="text-sm text-gray-500">* Datos requeridos</p>
+
+          <!-- Botón enviar -->
+          <button 
+            type="submit"
+            class="w-full bg-sky-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 transition-colors duration-200"
+          >
+            Enviar
+          </button>
+        </form>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <style>
-    .contact {
-  border-radius: 0;
-  font-family: Poppins, sans-serif;
-}
-
-.contact-content {
-  background: var(--Colour-1, #ECEFFD);
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 60px 0px;
-}
-
-@media (max-width: 991px) {
-  .contact-content {
-    max-width: 100%;
-    padding: 0 20px;
-  }
-}
-
-.contact-wrapper {
-  display: flex;
-  width: 100%;
-  max-width: 1127px;
-  align-items: flex-start;
-  gap: 100px;
-  flex-wrap: wrap;
-  justify-content: start;
-}
-
-@media (max-width: 991px) {
-  .contact-wrapper {
-    max-width: 100%;
-  }
-}
-
-.company-info {
-  align-self: start;
-  display: flex;
-  flex-direction: column;
-  font-family: Assistant, sans-serif;
-}
-
-.logo-container {
-  align-self: start;
-  display: flex;
-  font-size: 20px;
-  color: rgba(30, 30, 30, 1);
-  font-weight: 600;
-  white-space: nowrap;
-}
-
-@media (max-width: 991px) {
-  .logo-container {
-    white-space: initial;
-  }
-}
-
-.logo {
-  aspect-ratio: 1;
-  object-fit: contain;
-  object-position: center;
-  width: 64px;
-}
-
-.company-name {
-  margin: auto 0;
-}
-
-.contact-info {
-  display: flex;
-  margin-top: 0px;
-  width: 100%;
-  padding-left: 7px;
-  flex-direction: column;
-  align-items: start;
-  font-size: 16px;
-  color: var(--Text-Colour-2, #2b2b2b);
-  font-weight: 300;
-}
-
-.address {
-  display: flex;
-  margin-top: 20px;
-  margin-bottom: 0px;
-  gap: 8px;
-}
-
-.phone-container {
-  display: flex;
-  margin-top: 20px;
-  gap: 8px;
-}
-
-@media (max-width: 991px) {
-  .phone-container {
-    margin-top: 40px;
-  }
-}
-
-.phone-icon {
-  aspect-ratio: 1;
-  object-fit: contain;
-  object-position: center;
-  width: 20px;
-}
-
-.phone-number {
-  leading-trim: both;
-  text-edge: cap;
-  margin: auto 0;
-}
-
-.email-container {
-  align-self: stretch;
-  align-items: baseline;
-  display: flex;
-  margin-top: 0px;
-  gap: 10px;
-  white-space: nowrap;
-}
-
-@media (max-width: 991px) {
-  .email-container {
-    white-space: initial;
-  }
-}
-
-.email-icon {
-  aspect-ratio: 1.43;
-  object-fit: contain;
-  object-position: center;
-  width: 20px;
-}
-
-.email-address {
-  display: flex;
-  margin-top: 20px;
-  margin-bottom: 0px;
-  gap: 8px;
-}
-
-.quick-links {
-  align-self: start;
-  display: flex;
-  margin-top: 0px;
-  flex-direction: column;
-}
-
-.links-title {
-  color: var(--Text-Colour-1, #0b090a);
-  leading-trim: both;
-  text-edge: cap;
-  font-size: 19px;
-  font-weight: 500;
-  align-self: start;
-  margin-top: 0px;
-}
-
-.links-list {
-  color: var(--Text-Colour-2, #2b2b2b);
-  leading-trim: both;
-  text-edge: cap;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 26px;
-  margin-top: 10px;
-}
-
-/* .discovery {
-  display: flex;
-  flex-direction: column;
-  margin: auto 0;
-}
-
-.discovery-title {
-  color: var(--Text-Colour-1, #0b090a);
-  leading-trim: both;
-  text-edge: cap;
-  font-size: 19px;
-  font-weight: 500;
-  align-self: start;
-}
-
-.discovery-list {
-  color: var(--Text-Colour-2, #2b2b2b);
-  leading-trim: both;
-  text-edge: cap;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 26px;
-  margin-top: 40px;
-} */
-
-.newsletter {
-  align-self: end;
-  display: flex;
- /*  margin-top: 21px; */
-  flex-direction: column;
-  align-items: start;
-  font-size: 19px;
-  color: var(--Text-Colour-1, #0b090a);
-  font-weight: 500;
-}
-
-.newsletter-title {
-  /* leading-trim: both; */    /* Nombre de la propiedad desconocido */
-/*   text-edge: cap; */    /* Nombre de la propiedad desconocido */
-  width: 90%;
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-
-.newsletter-form {
-  border-radius: 30px;
-  background-color: rgba(255, 255, 255, 1);
-  box-shadow: 4px 10px 20px rgba(0, 0, 0, 0.05);
-  align-self: stretch;
-  display: flex;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  gap: 20px;
-  font-size: 16px;
-  color: var(--Text-Colour-4, #aaa);
-  font-weight: 400;
-  line-height: 2;
-  justify-content: space-between;
-  padding: 5px 20px 5px 20px;
-}
-
-.newsletter-input {
-  leading-trim: both;
-  text-edge: cap;
-  height: 30px;
-  margin: auto 0;
-  background: transparent;
-  flex-grow: 1;
-}
-
-.visually-hidden {
-  padding-top: 10px;
-}
-
-.newsletter-submit {
-  aspect-ratio: 1;
-  object-fit: contain;
-  object-position: center;
-  width: 50px;
-  border-radius: 25px;
-  border: none;
-  cursor: pointer;
-}
-
-.social-container {
-    display: flex;
-    gap: 20px;
-  }
-  .left-social {
-    width: 80%;
-  }
-  .right-social {
-    width: 20%;
-    /* position: relative; */
-    /* box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2); */
-    /*  border-radius: 30px; */
-  }
-
-.social-media-title {
-  leading-trim: both;
-  text-edge: cap;
-  margin-top: 10px;
-}
-
-.social-media-icons {
-  aspect-ratio: 4.37;
-  object-fit: contain;
-  object-position: center;
-  width: 96px;
-  margin-top: 10px;
-}
-  </style>
+<script>
+  // Funcionalidad del formulario de contacto
+  const contactForm = document.getElementById('contact-form');
+  
+  contactForm?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    const formData = new FormData(contactForm);
+    const data = {
+      nombre: formData.get('nombre'),
+      email: formData.get('email'),
+      telefono: formData.get('telefono'),
+      asunto: formData.get('asunto'),
+      mensaje: formData.get('mensaje')
+    };
+    
+    // Aquí puedes agregar la lógica para enviar el formulario
+    // Por ejemplo, enviar a una API o servicio de correo
+    console.log('Datos del formulario:', data);
+    
+    // Mensaje de confirmación temporal
+    alert('¡Gracias por contactarnos! Te responderemos a la brevedad.');
+    
+    // Limpiar formulario
+    contactForm.reset();
+  });
+</script>
