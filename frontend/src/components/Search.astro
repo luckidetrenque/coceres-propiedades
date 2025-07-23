@@ -1,0 +1,105 @@
+<section class="bg-sky-500">
+    <div class="bg-black shadow-lg p-6">
+          <div class="max-w-[1200px] mx-auto px-4">
+      
+      <form class="flex flex-col lg:flex-row gap-4 items-end">
+        
+        <!-- Select Tipo de Operación -->
+        <div class="flex-1 min-w-0">
+          <select 
+            id="tipo-operacion" 
+            name="tipo-operacion"
+            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-sky-500 bg-white"
+          >
+            <option value="">Seleccionar operación</option>
+            <option value="venta">Venta</option>
+            <option value="alquiler">Alquiler</option>
+            <option value="alquiler-temporal">Alquiler Temporal</option>
+          </select>
+        </div>
+
+        <!-- Select Tipo de Inmueble -->
+        <div class="flex-1 min-w-0">
+          <select 
+            id="tipo-inmueble" 
+            name="tipo-inmueble"
+            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-sky-500 bg-white"
+          >
+            <option value="">Seleccionar inmueble</option>
+            <option value="casa">Casa</option>
+            <option value="departamento">Departamento</option>
+            <option value="ph">PH</option>
+            <option value="terreno">Terreno</option>
+            <option value="local">Local Comercial</option>
+            <option value="oficina">Oficina</option>
+            <option value="galpon">Galpón</option>
+          </select>
+        </div>
+
+        <!-- Input Búsqueda -->
+        <div class="flex-1 min-w-0 lg:max-w-md">
+          <input 
+            type="text" 
+            id="busqueda" 
+            name="busqueda"
+            placeholder="Buscar por ubicación, código o palabra clave"
+            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-sky-500"
+          />
+        </div>
+
+        <!-- Botón Buscar -->
+        <div class="flex-shrink-0">
+          <button 
+            type="submit"
+            class="bg-sky-600 text-white px-6 py-2 rounded-md hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 transition-colors duration-200 flex items-center gap-2 font-medium"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+            </svg>
+            Buscar
+          </button>
+        </div>
+      </form>
+    </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Funcionalidad del formulario de búsqueda
+  const searchForm = document.querySelector('form');
+  
+  searchForm?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    const formData = new FormData(searchForm);
+    const tipoOperacion = formData.get('tipo-operacion');
+    const tipoInmueble = formData.get('tipo-inmueble');
+    const busqueda = formData.get('busqueda');
+    
+    // Construir URL de búsqueda con parámetros
+    const params = new URLSearchParams();
+    if (tipoOperacion) params.append('operacion', String(tipoOperacion));
+    if (tipoInmueble) params.append('tipo', String(tipoInmueble));
+    if (busqueda) params.append('q', String(busqueda));
+    
+    // Redirigir a página de resultados
+    const searchUrl = `/propiedades${params.toString() ? '?' + params.toString() : ''}`;
+    window.location.href = searchUrl;
+  });
+
+  // Funcionalidad para búsquedas rápidas
+  const quickSearchButtons = document.querySelectorAll('button[class*="bg-gray-100"]');
+  
+  quickSearchButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const searchTerm = (button.textContent ?? '').trim();
+      const searchInput = document.getElementById('busqueda');
+      
+      if (searchInput && searchInput instanceof HTMLInputElement) {
+        searchInput.value = searchTerm;
+        searchForm?.dispatchEvent(new Event('submit'));
+      }
+    });
+  });
+</script>
