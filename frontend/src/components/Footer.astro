@@ -6,9 +6,11 @@ import logoburbujaarriba from "../assets/logoburbujaarriba.png";
 <footer class="w-full bg-gray-800 text-white py-12">
   <div class="max-w-[1200px] mx-auto px-4">
     <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
-      
-      <!-- Logo Section -->
-      <div class="flex-shrink-0">
+
+      <div class="flex items-center justify-between w-full md:w-auto mb-6 md:mb-0">
+
+              <!-- Logo Section -->
+      <div class="flex-0">
         <a href="/" class="text-white font-bold text-xl" aria-label="Ir al inicio - Cóceres Propiedades">
           <Picture
             src={logoburbujaarriba}
@@ -19,6 +21,21 @@ import logoburbujaarriba from "../assets/logoburbujaarriba.png";
           />
         </a>
       </div>
+                <!-- Dirección -->
+          <div class="flex items-start mt-8">
+            <svg class="w-5 h-5 mr-2 text-gray-400 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+            </svg>
+            <div>
+              <p class="text-gray-300">
+                Calle 64 N° 719, La Plata<br>
+                Buenos Aires, Argentina
+              </p>
+            </div>
+          </div>
+      </div>
+    
 
       <!-- Contact Information -->
       <div class="flex-1 md:max-w-3xl">
@@ -102,22 +119,6 @@ import logoburbujaarriba from "../assets/logoburbujaarriba.png";
           </div>
 
           
-        </div>
-
-        <!-- Dirección -->
-        <div class="mt-6 pt-6 border-t border-gray-700">
-          <div class="flex items-start">
-            <svg class="w-5 h-5 mr-2 text-gray-400 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-            </svg>
-            <div>
-              <p class="text-gray-300">
-                Calle 64 N° 719, La Plata<br>
-                Buenos Aires, Argentina
-              </p>
-            </div>
-          </div>
         </div>
       </div>
     </div>
