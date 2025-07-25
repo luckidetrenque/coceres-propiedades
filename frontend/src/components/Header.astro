@@ -10,7 +10,7 @@ import logosolo from "../assets/LogoSolo.png";
 import logoburbujaarriba from "../assets/logoburbujaarriba.png";
 ---
 
-<header class="sticky top-0 w-full bg-sky-400 z-50 shadow-md">
+<header class="sticky top-0 w-full header-custom z-50 shadow-md">
   <div class="max-w-[1200px] mx-auto px-4 py-4 flex items-center justify-between">
     <!-- Logo -->
     <div class="flex-shrink-0">
@@ -67,7 +67,7 @@ import logoburbujaarriba from "../assets/logoburbujaarriba.png";
   </div>
 
   <!-- Menú móvil -->
-  <nav id="mobile-menu" class="md:hidden bg-sky-500 hidden">
+  <nav id="mobile-menu" class="md:hidden mobile-menu-custom hidden">
     <ul class="px-4 py-2 space-y-2">
       <!-- <li>
         <a href="/" class="block text-white hover:text-sky-100 py-2 transition-colors duration-200">
@@ -108,6 +108,15 @@ import logoburbujaarriba from "../assets/logoburbujaarriba.png";
   });
 </script>
 <style>
+  /* Colores personalizados del header */
+  .header-custom {
+    background-color: #38A6A4;
+  }
+  
+  .mobile-menu-custom {
+    background-color: #2d8a88;
+  }
+
   .header-container {
     font-family: Assistant, sans-serif;
     white-space: nowrap;

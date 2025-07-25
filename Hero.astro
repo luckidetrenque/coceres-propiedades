@@ -1,37 +1,58 @@
 ---
 import { Picture } from "astro:assets";
 import logoburbujaarriba from "../assets/logoburbujaarriba.png";
+import inmueble1 from "../assets/images/inmueble-1.jpg";
+import inmueble2 from "../assets/images/inmueble-2.jpg";
+import inmueble3 from "../assets/images/inmueble-3.jpg";
 ---
 
 <section class="relative w-full h-[75vh] overflow-hidden">
   <!-- Slider de imágenes de fondo -->
   <div class="absolute inset-0 w-full h-full">
     <!-- Imagen 1 -->
+<<<<<<< HEAD
     <div class="hero-slide absolute inset-0 w-full h-full opacity-0 transition-opacity duration-1000">
+      <Picture
+        src={inmueble1}
+        alt=`na descripción de mi imagen. ${inmueble1}``
+=======
     <div class="hero-slide absolute inset-0 w-full h-full opacity-0 transition-opacity duration-1000 flex items-center justify-center">
       <img 
         src="/slide-1.png" 
         alt="Logo" 
+>>>>>>> 96bea022f86d180d84a438b478294ac8ca7e542e
         class="w-full h-full object-cover opacity-50"
       />
     </div>
     
     <!-- Imagen 2 -->
     <div class="hero-slide absolute inset-0 w-full h-full opacity-0 transition-opacity duration-1000">
+<<<<<<< HEAD
+      <Picture
+        src={inmueble2}
+        alt=`na descripción de mi imagen. ${inmueble2}``
+=======
       <img 
         src="/oficina-1.jpg" 
         alt="Recepcion" 
+>>>>>>> 96bea022f86d180d84a438b478294ac8ca7e542e
         class="w-full h-full object-cover opacity-50"
       />
     </div>
     
     <!-- Imagen 3 -->
     <div class="hero-slide absolute inset-0 w-full h-full opacity-0 transition-opacity duration-1000">
-
+<<<<<<< HEAD
+      <Picture
+        src={inmueble3}
+        alt=`na descripción de mi imagen. ${inmueble3}``
+        class="w-full h-full object-cover opacity-50"
+=======
       <img 
         src="/oficina-2.jpg" 
         alt="Sala de reuniones" 
         class="w-full h-full object-cover opacity-60"
+>>>>>>> 96bea022f86d180d84a438b478294ac8ca7e542e
       />
     </div>
 
