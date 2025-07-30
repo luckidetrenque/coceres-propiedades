@@ -1,208 +1,281 @@
-<section class="testimonials-section">
-    <div class="testimonials-container">
-      <div class="testimonials-content">
-        <div class="testimonials-layout">
-          <div class="testimonials-intro">
-            <h2 class="testimonials-label">TESTIMONIOS</h2>
-            <h3 class="testimonials-title">Esto es lo que dicen nuestros clientes</h3>
-            <p class="testimonials-description">Fusce venenatis tellus a felis scelerisque, non pulvinar est pellentesque.</p>
-            <div class="testimonials-controls">
-              <button class="control-button" aria-label="Previous testimonial">
-                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/7c4a78661a417788e09706ca8e4d411ca81068f1997f4ccbf5f9f0b8b81de518?placeholderIfAbsent=true&apiKey=14edc26cd1c84e4e82050b69a6d44df8" alt="" class="control-icon" />
-              </button>
-              <button class="control-button" aria-label="Next testimonial">
-                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/c6033dce0249dca724a3a71610e423668fb19b030d4e702ccb7e1cae0360ffdc?placeholderIfAbsent=true&apiKey=14edc26cd1c84e4e82050b69a6d44df8" alt="" class="control-icon" />
-              </button>
+---
+// Opiniones.astro
+---
+
+<section class="py-16 bg-white">
+  <div class="max-w-[1200px] mx-auto px-4">
+    <!-- Título y descripción -->
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-gray-800 mb-4">Opiniones de Nuestros Clientes</h2>
+      <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+        La confianza de nuestros clientes es nuestro mayor logro. Conocé qué dicen quienes ya encontraron su lugar ideal con nosotros.
+      </p>
+    </div>
+
+    <!-- Carrusel de testimonios -->
+    <div class="relative">
+      <div class="overflow-hidden rounded-lg">
+        <div id="testimonials-container" class="flex transition-transform duration-500 ease-in-out">
+          
+          <!-- Testimonio 1 -->
+          <div class="flex-shrink-0 w-full px-4">
+            <div class="bg-gray-50 rounded-lg p-8 text-center max-w-3xl mx-auto">
+              <!-- Valoración con estrellas -->
+              <div class="flex justify-center mb-4">
+                <div class="flex space-x-1">
+                  <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                    <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
+                  </svg>
+                  <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                    <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
+                  </svg>
+                  <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                    <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
+                  </svg>
+                  <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                    <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
+                  </svg>
+                  <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                    <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
+                  </svg>
+                </div>
+              </div>
+              
+              <!-- Texto del testimonio -->
+              <blockquote class="text-lg text-gray-700 mb-6 italic leading-relaxed">
+                "Excelente atención desde el primer contacto. Juan y su equipo nos acompañaron durante todo el proceso de compra de nuestro primer departamento. Muy profesionales y siempre dispuestos a resolver nuestras dudas. Sin dudas los recomendaría."
+              </blockquote>
+              
+              <!-- Foto y datos del cliente -->
+              <div class="flex items-center justify-center">
+                <div class="w-12 h-12 rounded-full overflow-hidden mr-4 bg-gray-200">
+                  <img 
+                    src="/cliente-1.jpg" 
+                    alt="María González"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+                <div class="text-left">
+                  <h4 class="font-semibold text-gray-800">María González</h4>
+                  <p class="text-sm text-gray-600">Compradora - Palermo</p>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="testimonial-card-wrapper">
-            <article class="testimonial-card">
-              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/80f468f9db308c9b0ffd156c9cb486486d2f8242b9a6d6183b59aa64787d47af?placeholderIfAbsent=true&apiKey=14edc26cd1c84e4e82050b69a6d44df8" alt="" class="quote-icon" />
-              <p class="testimonial-text">I highly recommend Jodi J. Appleby. She was attentive to our needs and worked tirelessly to find us the perfect home. We couldn't be happier with our new place!</p>
-              <hr class="testimonial-divider" />
-              <footer class="testimonial-footer">
-                <div class="author-info">
-                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/63d511c4f484390867ab011b269bcf5b767bab3cf2003e129c3a2c468f8e1ed2?placeholderIfAbsent=true&apiKey=14edc26cd1c84e4e82050b69a6d44df8" alt="Barbara D. Smith" class="author-avatar" />
-                  <p class="author-name">Barbara D. Smith</p>
+
+          <!-- Testimonio 2 -->
+          <div class="flex-shrink-0 w-full px-4">
+            <div class="bg-gray-50 rounded-lg p-8 text-center max-w-3xl mx-auto">
+              <!-- Valoración con estrellas -->
+              <div class="flex justify-center mb-4">
+                <div class="flex space-x-1">
+                  <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                    <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
+                  </svg>
+                  <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                    <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
+                  </svg>
+                  <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                    <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
+                  </svg>
+                  <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                    <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
+                  </svg>
+                  <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                    <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
+                  </svg>
                 </div>
-                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/65809bb186ce38ac78b00e0a5dc7956facb029419c68aacd58e1619316e4a30e?placeholderIfAbsent=true&apiKey=14edc26cd1c84e4e82050b69a6d44df8" alt="5 star rating" class="rating" />
-              </footer>
-            </article>
+              </div>
+              
+              <!-- Texto del testimonio -->
+              <blockquote class="text-lg text-gray-700 mb-6 italic leading-relaxed">
+                "Vendimos nuestra casa con Cóceres Propiedades y la experiencia fue excelente. Carlos nos ayudó con todo el papeleo y logró un precio justo en tiempo récord. Muy contentos con el resultado y el trato recibido."
+              </blockquote>
+              
+              <!-- Foto y datos del cliente -->
+              <div class="flex items-center justify-center">
+                <div class="w-12 h-12 rounded-full overflow-hidden mr-4 bg-gray-200">
+                  <img 
+                    src="/cliente-2.jpg" 
+                    alt="Roberto Fernández"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+                <div class="text-left">
+                  <h4 class="font-semibold text-gray-800">Roberto Fernández</h4>
+                  <p class="text-sm text-gray-600">Vendedor - San Isidro</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonio 3 -->
+          <div class="flex-shrink-0 w-full px-4">
+            <div class="bg-gray-50 rounded-lg p-8 text-center max-w-3xl mx-auto">
+              <!-- Valoración con estrellas -->
+              <div class="flex justify-center mb-4">
+                <div class="flex space-x-1">
+                  <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                    <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
+                  </svg>
+                  <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                    <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
+                  </svg>
+                  <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                    <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
+                  </svg>
+                  <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                    <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
+                  </svg>
+                  <svg class="w-5 h-5 text-gray-300 fill-current" viewBox="0 0 20 20">
+                    <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
+                  </svg>
+                </div>
+              </div>
+              
+              <!-- Texto del testimonio -->
+              <blockquote class="text-lg text-gray-700 mb-6 italic leading-relaxed">
+                "Encontré el departamento perfecto para alquilar gracias a María. Su conocimiento del barrio y su paciencia para mostrarme diferentes opciones fue increíble. Proceso súper ágil y transparente en todo momento."
+              </blockquote>
+              
+              <!-- Foto y datos del cliente -->
+              <div class="flex items-center justify-center">
+                <div class="w-12 h-12 rounded-full overflow-hidden mr-4 bg-gray-200">
+                  <img 
+                    src="/cliente-3.jpg" 
+                    alt="Ana Martínez"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+                <div class="text-left">
+                  <h4 class="font-semibold text-gray-800">Ana Martínez</h4>
+                  <p class="text-sm text-gray-600">Inquilina - Belgrano</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+
+      <!-- Flechas de navegación -->
+      <button 
+        id="prev-testimonial"
+        class="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 bg-white shadow-lg rounded-full p-2 hover:bg-gray-50 transition-colors duration-200"
+      >
+        <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+        </svg>
+      </button>
+
+      <button 
+        id="next-testimonial"
+        class="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 bg-white shadow-lg rounded-full p-2 hover:bg-gray-50 transition-colors duration-200"
+      >
+        <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+        </svg>
+      </button>
+
+      <!-- Indicadores -->
+      <div class="flex justify-center mt-8 space-x-2">
+        <button class="testimonial-dot w-3 h-3 rounded-full bg-sky-600 transition-all duration-300" data-slide="0"></button>
+        <button class="testimonial-dot w-3 h-3 rounded-full bg-gray-300 transition-all duration-300" data-slide="1"></button>
+        <button class="testimonial-dot w-3 h-3 rounded-full bg-gray-300 transition-all duration-300" data-slide="2"></button>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <style>
-    .testimonials-section {
-  display: flex;
-  flex-direction: column;
-  border-radius: 0;
-}
+<script>
+  class TestimonialCarousel {
+	currentSlide: number;
+	totalSlides: number;
+	container: HTMLElement | null;
+	prevBtn: HTMLElement | null;
+	nextBtn: HTMLElement | null;
+	dots: NodeListOf<Element>;
+	autoSlideInterval!: number;
+    constructor() {
+      this.currentSlide = 0;
+      this.totalSlides = 3;
+      this.container = document.getElementById('testimonials-container');
+      this.prevBtn = document.getElementById('prev-testimonial');
+      this.nextBtn = document.getElementById('next-testimonial');
+      this.dots = document.querySelectorAll('.testimonial-dot');
+      
+      this.init();
+    }
 
-.testimonials-container {
-  background-color: #fff;
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 50px 10px;
-}
+    init() {
+      // Event listeners para botones
+      this.prevBtn?.addEventListener('click', () => this.prevSlide());
+      this.nextBtn?.addEventListener('click', () => this.nextSlide());
+      
+      // Event listeners para dots
+      this.dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => this.goToSlide(index));
+      });
+      
+      // Auto-slide cada 6 segundos
+      this.autoSlide();
+      
+      // Pausar auto-slide al hacer hover
+      this.container?.addEventListener('mouseenter', () => this.pauseAutoSlide());
+      this.container?.addEventListener('mouseleave', () => this.resumeAutoSlide());
+    }
 
-.testimonials-content {
-  margin-bottom: -22px;
-  width: 100%;
-  max-width: 1120px;
-}
+    goToSlide(index: number) {
+      this.currentSlide = index;
+      const translateX = -this.currentSlide * 100;
+      
+      if (this.container) {
+        this.container.style.transform = `translateX(${translateX}%)`;
+      }
+      
+      this.updateDots();
+    }
 
-.testimonials-layout {
-  display: flex;
-  gap: 20px;
-}
+    nextSlide() {
+      this.currentSlide = (this.currentSlide + 1) % this.totalSlides;
+      this.goToSlide(this.currentSlide);
+    }
 
-.testimonials-intro {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  align-items: flex-start;
-}
+    prevSlide() {
+      this.currentSlide = this.currentSlide === 0 ? this.totalSlides - 1 : this.currentSlide - 1;
+      this.goToSlide(this.currentSlide);
+    }
 
-.testimonials-label {
-  color: #4361ee;
-  letter-spacing: 2.91px;
-  font: 500 19px Poppins, sans-serif;
-}
+    updateDots() {
+      this.dots.forEach((dot, index) => {
+        if (index === this.currentSlide) {
+          dot.classList.remove('bg-gray-300');
+          dot.classList.add('bg-sky-600');
+        } else {
+          dot.classList.remove('bg-sky-600');
+          dot.classList.add('bg-gray-300');
+        }
+      });
+    }
 
-.testimonials-title {
-  color: #2b2b2b;
-  margin-top: 30px;
-  font: 600 40px/47px Poppins, sans-serif;
-}
+    autoSlide() {
+      this.autoSlideInterval = setInterval(() => {
+        this.nextSlide();
+      }, 6000);
+    }
 
-.testimonials-description {
-  color: #2b2b2b;
-  margin-top: 30px;
-  font: 400 16px/26px Poppins, sans-serif;
-}
+    pauseAutoSlide() {
+      if (this.autoSlideInterval) {
+        clearInterval(this.autoSlideInterval);
+      }
+    }
 
-.testimonials-controls {
-  display: flex;
-  margin-top: 60px;
-  width: 150px;
-  max-width: 100%;
-  gap: 40px 50px;
-}
-
-.control-button {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex: 1;
-}
-
-.control-icon {
-  aspect-ratio: 1;
-  object-fit: contain;
-  object-position: center;
-  width: 50px;
-}
-
-.testimonial-card {
-  border-radius: 30px;
-  background: #fff;
-  box-shadow: 10px 10px 30px 0 rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  flex-basis: 0;
-  width: fit-content;
-  padding: 31px 50px;
-}
-
-.quote-icon {
-  aspect-ratio: 1.62;
-  object-fit: contain;
-  object-position: center;
-  width: 60px;
-  margin-left: 10px;
-}
-
-.testimonial-text {
-  margin: 19px 10px 0;
-}
-
-.testimonial-divider {
-  background-color: #d4d4d4;
-  margin-top: 39px;
-  height: 1px;
-  border: 1px solid #d4d4d4;
-}
-
-.testimonial-footer {
-  display: flex;
-  margin-top: 20px;
-  width: 100%;
-  gap: 20px;
-  justify-content: space-between;
-}
-
-.author-info {
-  display: flex;
-  gap: 15px;
-}
-
-.author-avatar {
-  aspect-ratio: 1;
-  object-fit: contain;
-  object-position: center;
-  width: 50px;
-  border-radius: 50%;
-}
-
-.author-name {
-  margin: auto 0;
-}
-
-.rating {
-  aspect-ratio: 6.62;
-  object-fit: contain;
-  object-position: center;
-  width: 86px;
-  margin: auto 0;
-}
-
-@media (max-width: 991px) {
-  .testimonials-container {
-    max-width: 100%;
-    padding: 100px 20px;
+    resumeAutoSlide() {
+      this.autoSlide();
+    }
   }
 
-  .testimonials-content {
-    max-width: 100%;
-    margin-bottom: 10px;
-  }
-
-  .testimonials-layout {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0;
-  }
-
-  .testimonials-intro,
-  .testimonial-card-wrapper {
-    width: 100%;
-    margin-top: 40px;
-  }
-
-  .testimonials-controls {
-    margin-top: 40px;
-  }
-
-  .testimonial-card {
-    max-width: 100%;
-    padding: 0 20px;
-  }
-}
-  </style>
+  // Inicializar carrusel cuando cargue la página
+  document.addEventListener('DOMContentLoaded', () => {
+    new TestimonialCarousel();
+  });
+</script>

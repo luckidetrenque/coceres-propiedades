@@ -1,3 +1,7 @@
+---
+import Asesoramiento from "./Asesoramiento.astro";
+---
+
 <section class="bg-white">
   <!-- Bloque 1: Slogan con fondo gris -->
     <div class="bg-gray-100 p-8 rounded-lg mb-16">
@@ -348,23 +352,7 @@
       />
       <div class="absolute inset-0 bg-sky-600 bg-opacity-70"></div>
     </div>
-
-    <!-- Contenido -->
-    <div class="relative z-10 py-16 px-8 text-center text-white">
-      <h2 class="text-3xl md:text-4xl font-bold mb-6">
-        ¿Necesitás un asesor de confianza?
-      </h2>
-      <p class="text-xl mb-8 text-sky-100">
-        Nuestro equipo está listo para ayudarte a encontrar la propiedad
-        perfecta
-      </p>
-      <a
-        href="/contacto"
-        class="inline-block bg-white text-sky-600 font-semibold px-8 py-3 rounded-lg hover:bg-sky-50 transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-      >
-        Contactanos
-      </a>
-    </div>
+    <Asesoramiento />
     </div>
   </div>
 </section>
