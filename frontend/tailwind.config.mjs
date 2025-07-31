@@ -5,7 +5,8 @@ export default {
 		extend: {
 			// 1. COLORES PERSONALIZADOS
 			colors: {
-				'coceres-blue': '#38A6A4',
+				'coceres-blue': '#0D6885',
+				'coceres-green': '#38A6A4',
 				'coceres-dark': '#2d8a88',
 				'coceres-light': '#8BCDB0',
 				'brand': {
