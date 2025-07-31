@@ -1,34 +1,28 @@
 ---
-interface Props {
-  title: string;
-}
-
-const { title } = Astro.props;
-
 import { Picture } from "astro:assets";
-import logosolo from "../assets/LogoSolo.png";
 import logoburbujaarriba from "../assets/logoburbujaarriba.png";
 ---
 
-<header class="sticky top-0 w-full header-custom z-50 shadow-md">
-  <div class="max-w-[1200px] mx-auto px-4 py-4 flex items-center justify-between">
+<header class="sticky top-0 w-full bg-coceres-blue z-50 shadow-md">
+  <div class="max-w-[1200px] mx-auto px-4 py-4 flex items-center justify-between relative">
     <!-- Logo -->
     <div class="flex-shrink-0">
-      <a href="/" class="text-white font-bold text-xl">
-              <Picture
-        src={logoburbujaarriba}
-        formats={["png"]}
-        alt=""
-        class="featured-image"
-        width={80}
-      />
+      <a href="/" class="flex items-center space-x-3 text-white font-bold text-xl">
+        <Picture
+          src={logoburbujaarriba}
+          formats={["png"]}
+          alt="Coceres Propiedades"
+          class="featured-image"
+          width={80}
+        />
+        <span class="text-white font-sans text-xl">COCERES PROPIEDADES</span>
       </a>
       <!-- Si tienes una imagen de logo, reemplaza con: -->
       <!-- <img src="/logo.png" alt="Logo" class="h-8 w-auto"> -->
     </div>
 
     <!-- Menú de navegación -->
-    <nav class="hidden md:flex">
+    <nav class="hidden md:flex relative z-10">
       <ul class="flex space-x-8">
         <!-- <li>
           <a href="/" class="text-white hover:text-sky-100 transition-colors duration-200 font-medium">
@@ -67,7 +61,7 @@ import logoburbujaarriba from "../assets/logoburbujaarriba.png";
   </div>
 
   <!-- Menú móvil -->
-  <nav id="mobile-menu" class="md:hidden mobile-menu-custom hidden">
+  <nav id="mobile-menu" class="md:hidden bg-coceres-dark hidden">
     <ul class="px-4 py-2 space-y-2">
       <!-- <li>
         <a href="/" class="block text-white hover:text-sky-100 py-2 transition-colors duration-200">

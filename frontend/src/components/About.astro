@@ -4,24 +4,27 @@ import Asesoramiento from "./Asesoramiento.astro";
 
 <section class="bg-white">
   <!-- Bloque 1: Slogan con fondo gris -->
-    <div class="bg-gray-100 p-8 rounded-lg mb-16">
-      <div class="max-w-[1200px] mx-auto px-4">
-      <p class="text-lg text-gray-700 text-center leading-relaxed">
-        Con más de diez años de experiencia en el rubro inmobiliario, Cóceres
-        Propiedades da un paso hacia adelante en el rubro del Real Estate
-        construyendo una marca personal de prestigio gracias al compromiso y
-        servicio personalizado para con sus clientes.
-      </p>
+   <div class="mb-16">
+      <div class="max-w-[1200px] mx-auto px-4 flex items-center justify-center min-h-[120px]">
+      <h2 class="text-3xl font-bold text-gray-800 text-center mb-4">
+        Nuestro Equipo
+      </h2>
+      </div>
+
+      
+      <div class="bg-gray-100 p-8 mb-16">
+        <div class="max-w-[1200px] mx-auto px-4">
+        <p class="text-lg text-gray-700 text-center leading-relaxed">
+          Con más de diez años de experiencia en el rubro inmobiliario, Cóceres
+          Propiedades da un paso hacia adelante en el rubro del Real Estate
+          construyendo una marca personal de prestigio gracias al compromiso y
+          servicio personalizado para con sus clientes.
+        </p>
+        </div>
       </div>
     </div>
 
     <!-- Bloque 2: Agentes inmobiliarios y fotos de la inmobiliaria -->
-    <div class="mb-16">
-      <div class="max-w-[1200px] mx-auto px-4">
-      <h2 class="text-3xl font-bold text-gray-800 text-center mb-12">
-        Nuestro Equipo
-      </h2>
-
       <!-- Primera fila de agentes -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
         <!-- Agente 1 -->
@@ -300,7 +303,7 @@ import Asesoramiento from "./Asesoramiento.astro";
   </div>
 
   <!-- Bloque 3: Misión, Visión e Historia -->
-  <div class="mb-16">
+  <div class="mt-6 mb-16">
     <div class="max-w-[1200px] mx-auto px-4">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       <!-- Nuestra Misión -->
@@ -340,16 +343,16 @@ import Asesoramiento from "./Asesoramiento.astro";
 
   <!-- Bloque 4: Call to Action similar al hero -->
   <div
-    class="relative bg-gradient-to-r from-sky-500 to-sky-600 rounded-lg overflow-hidden"
+    class="relative bg-gradient-to-r from-sky-500 to-sky-600 overflow-hidden"
   >
-  <div class="max-w-[1200px] mx-auto px-4"></div>
     <!-- Imagen de fondo opcional -->
     <div class="absolute inset-0">
-      <img
+      {/*<img
         src="/cta-background.jpg"
-        alt="Contacto"
+        alt=""
         class="w-full h-full object-cover opacity-30"
       />
+      */}
       <div class="absolute inset-0 bg-sky-600 bg-opacity-70"></div>
     </div>
     <Asesoramiento />

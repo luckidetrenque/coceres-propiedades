@@ -260,7 +260,7 @@
     autoSlide() {
       this.autoSlideInterval = setInterval(() => {
         this.nextSlide();
-      }, 6000);
+      }, 6000) as unknown as number;
     }
 
     pauseAutoSlide() {
