@@ -1,167 +1,181 @@
 ---
 // Servicios.astro
+import { Icon } from "astro-icon/components";
 ---
 
 <section class="bg-white">
-    <!-- Título de la sección -->
-     <div class="max-w-[1200px] mx-auto px-4 flex items-center justify-center min-h-[100px]">
-      <h2 class="text-3xl font-sans-bold text-gray-800 text-center">
-        SERVICIOS
-      </h2>
-      </div>
+  <!-- Título de la sección -->
+  <div
+    class="max-w-[1200px] mx-auto px-4 flex items-center justify-center min-h-[100px]"
+  >
+    <h2 class="text-3xl font-sans-bold text-gray-800 text-center">SERVICIOS</h2>
+  </div>
 
-      <div class="bg-brand-50 p-8 mb-16">
-        <div class="max-w-[1200px] mx-auto px-4">
-        <p class="text-lg text-gray-700 text-center leading-relaxed">
-          Ofrecemos soluciones integrales para todas tus necesidades inmobiliarias con el respaldo de años de experiencia
-        </p>
-        </div>
-      </div>
+  <div class="bg-brand-50 p-8 mb-16">
+    <div class="max-w-[1200px] mx-auto px-4">
+      <p class="text-lg text-gray-700 text-center leading-relaxed">
+        Ofrecemos soluciones integrales para todas tus necesidades inmobiliarias
+        con el respaldo de años de experiencia
+      </p>
+    </div>
+  </div>
 
-    {/*<div class="text-center mb-12">
+  {
+    /*<div class="text-center mb-12">
       <h2 class="text-3xl font-bold text-gray-800 mb-4">Servicios</h2>
       <p class="text-gray-600 text-lg max-w-2xl mx-auto">
         
       </p>
     </div>
-      */}
-    <!-- Grid de servicios -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-      
-      <!-- Servicio 1: Venta -->
-      <div class="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow duration-300">
-        <!-- Icono -->
-        <div class="mb-4">
-          <div class="w-16 h-16 bg-sky-100 rounded-full flex items-center justify-center mx-auto">
-            <svg class="w-8 h-8 text-sky-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path>
-            </svg>
-          </div>
-        </div>
-        
-        <!-- Título -->
-        <h3 class="text-xl font-bold text-gray-800 mb-4">Venta</h3>
-        
-        <!-- Descripción -->
-        <p class="text-gray-600 mb-6 leading-relaxed">
-          Acompañamos a vendedores y compradores durante todo el proceso de venta hasta el feliz término.
-        </p>
-        
-        <!-- Botón -->
-        <a 
-          href="/servicios/venta" 
-          class="inline-block bg-sky-600 text-white px-6 py-2 rounded-lg hover:bg-sky-700 transition-colors duration-200 font-medium"
+      */
+  }
+  <!-- Grid de servicios -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <!-- Servicio 1: Venta -->
+    <div
+      class="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow duration-300"
+    >
+      <!-- Icono -->
+      <div class="mb-4">
+        <div
+          class="w-16 h-16 bg-sky-100 rounded-full flex items-center justify-center mx-auto"
         >
-          Ver más
-        </a>
+          <Icon name="services/venta" class="w-8 h-8 text-sky-600" />
+        </div>
       </div>
 
-      <!-- Servicio 2: Alquiler -->
-      <div class="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow duration-300">
-        <!-- Icono -->
-        <div class="mb-4">
-          <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto">
-            <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"></path>
-            </svg>
-          </div>
-        </div>
-        
-        <!-- Título -->
-        <h3 class="text-xl font-bold text-gray-800 mb-4">Alquiler</h3>
-        
-        <!-- Descripción -->
-        <p class="text-gray-600 mb-6 leading-relaxed">
-          Encontrar tu lugar en el mundo no es cosa fácil. Nosotros te ayudamos a hacerlo realidad.
-        </p>
-        
-        <!-- Botón -->
-        <a 
-          href="/servicios/alquiler" 
-          class="inline-block bg-sky-600 text-white px-6 py-2 rounded-lg hover:bg-sky-700 transition-colors duration-200 font-medium"
-        >
-          Ver más
-        </a>
-      </div>
+      <!-- Título -->
+      <h3 class="text-xl font-bold text-gray-800 mb-4">Venta</h3>
 
-      <!-- Servicio 3: Emprendimientos -->
-      <div class="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow duration-300">
-        <!-- Icono -->
-        <div class="mb-4">
-          <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto">
-            <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h4a1 1 0 011 1v5m-6 0V9a1 1 0 011-1h4a1 1 0 011 1v10"></path>
-            </svg>
-          </div>
-        </div>
-        
-        <!-- Título -->
-        <h3 class="text-xl font-bold text-gray-800 mb-4">Emprendimientos</h3>
-        
-        <!-- Descripción -->
-        <p class="text-gray-600 mb-6 leading-relaxed">
-          Para los que apuestan a futuro, contamos con desarrollos exclusivos que se ajustan a cada necesidad.
-        </p>
-        
-        <!-- Botón -->
-        <a 
-          href="/servicios/emprendimientos" 
-          class="inline-block bg-sky-600 text-white px-6 py-2 rounded-lg hover:bg-sky-700 transition-colors duration-200 font-medium"
-        >
-          Ver más
-        </a>
-      </div>
+      <!-- Descripción -->
+      <p class="text-gray-600 mb-6 leading-relaxed">
+        Acompañamos a vendedores y compradores durante todo el proceso de venta
+        hasta el feliz término.
+      </p>
 
-      <!-- Servicio 4: Tasaciones -->
-      <div class="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow duration-300">
-        <!-- Icono -->
-        <div class="mb-4">
-          <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto">
-            <svg class="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
-            </svg>
-          </div>
-        </div>
-        
-        <!-- Título -->
-        <h3 class="text-xl font-bold text-gray-800 mb-4">Tasaciones</h3>
-        
-        <!-- Descripción -->
-        <p class="text-gray-600 mb-6 leading-relaxed">
-          Ponemos en valor la propiedad de nuestros clientes para lograr un trato justo y cumplir con sus expectativas.
-        </p>
-        
-        <!-- Botón -->
-        <a 
-          href="/servicios/tasaciones" 
-          class="inline-block bg-sky-600 text-white px-6 py-2 rounded-lg hover:bg-sky-700 transition-colors duration-200 font-medium"
-        >
-          Ver más
-        </a>
-      </div>
+      <!-- Botón -->
+      <a
+        href="/servicios/venta"
+        class="inline-block bg-sky-600 text-white px-6 py-2 rounded-lg hover:bg-sky-700 transition-colors duration-200 font-medium"
+      >
+        Ver más
+      </a>
     </div>
 
-  <!-- Asesoramineto: Sección adicional con call to action -->
+    <!-- Servicio 2: Alquiler -->
+    <div
+      class="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow duration-300"
+    >
+      <!-- Icono -->
+      <div class="mb-4">
+        <div
+          class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto"
+        >
+          <Icon name="services/alquiler" class="w-8 h-8 text-green-600" />
+        </div>
+      </div>
+
+      <!-- Título -->
+      <h3 class="text-xl font-bold text-gray-800 mb-4">Alquiler</h3>
+
+      <!-- Descripción -->
+      <p class="text-gray-600 mb-6 leading-relaxed">
+        Encontrar tu lugar en el mundo no es cosa fácil. Nosotros te ayudamos a
+        hacerlo realidad.
+      </p>
+
+      <!-- Botón -->
+      <a
+        href="/servicios/alquiler"
+        class="inline-block bg-sky-600 text-white px-6 py-2 rounded-lg hover:bg-sky-700 transition-colors duration-200 font-medium"
+      >
+        Ver más
+      </a>
+    </div>
+
+    <!-- Servicio 3: Emprendimientos -->
+    <div
+      class="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow duration-300"
+    >
+      <!-- Icono -->
+      <div class="mb-4">
+        <div
+          class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto"
+        >
+          <Icon name="services/emprendimiento" class="w-8 h-8 text-purple-600" />
+        </div>
+      </div>
+
+      <!-- Título -->
+      <h3 class="text-xl font-bold text-gray-800 mb-4">Emprendimientos</h3>
+
+      <!-- Descripción -->
+      <p class="text-gray-600 mb-6 leading-relaxed">
+        Para los que apuestan a futuro, contamos con desarrollos exclusivos que
+        se ajustan a cada necesidad.
+      </p>
+
+      <!-- Botón -->
+      <a
+        href="/servicios/emprendimientos"
+        class="inline-block bg-sky-600 text-white px-6 py-2 rounded-lg hover:bg-sky-700 transition-colors duration-200 font-medium"
+      >
+        Ver más
+      </a>
+    </div>
+
+    <!-- Servicio 4: Tasaciones -->
+    <div
+      class="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow duration-300"
+    >
+      <!-- Icono -->
+      <div class="mb-4">
+        <div
+          class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto"
+        >
+          <Icon name="services/tasacion" class="w-8 h-8 text-orange-600" />
+        </div>
+      </div>
+
+      <!-- Título -->
+      <h3 class="text-xl font-bold text-gray-800 mb-4">Tasaciones</h3>
+
+      <!-- Descripción -->
+      <p class="text-gray-600 mb-6 leading-relaxed">
+        Ponemos en valor la propiedad de nuestros clientes para lograr un trato
+        justo y cumplir con sus expectativas.
+      </p>
+
+      <!-- Botón -->
+      <a
+        href="/servicios/tasaciones"
+        class="inline-block bg-sky-600 text-white px-6 py-2 rounded-lg hover:bg-sky-700 transition-colors duration-200 font-medium"
+      >
+        Ver más
+      </a>
+    </div>
   </div>
+
+  <!-- Asesoramineto: Sección adicional con call to action -->
 </section>
 
 <script>
   // Animación al hacer scroll (opcional)
   const observerOptions = {
     threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
+    rootMargin: "0px 0px -50px 0px",
   };
 
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
+    entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('animate-fade-in');
+        entry.target.classList.add("animate-fade-in");
       }
     });
   }, observerOptions);
 
   // Observar las tarjetas de servicios
-  document.querySelectorAll('.grid > div').forEach(card => {
+  document.querySelectorAll(".grid > div").forEach((card) => {
     observer.observe(card);
   });
 </script>

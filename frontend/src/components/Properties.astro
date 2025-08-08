@@ -1,3 +1,7 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
 <section class="bg-white">
     <!-- Título de la sección -->
       <div class="max-w-[1200px] mx-auto px-4 flex items-center justify-center min-h-[100px]">
@@ -25,7 +29,8 @@
     </div>
 
     <!-- Grid de propiedades -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+     <div class="max-w-[1200px] mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
       
       <!-- Propiedad 1 -->
       <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
@@ -48,10 +53,10 @@
           </h3>
           
           <p class="text-gray-600 text-sm mb-3 flex items-center">
-            <svg class="w-4 h-4 mr-1 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-            </svg>
+          <Icon
+            name="contact/domicilio"
+            class="w-5 h-5 mr-2 text-sky-600 flex-shrink-0"
+          />
             Calle 445 e/ Camino General Belgrano y calle 23, City Bell
           </p>
           
@@ -62,22 +67,24 @@
           <!-- Características -->
           <ul class="flex justify-between mb-4 text-sm text-gray-600">
             <li class="flex items-center">
-              <svg class="w-4 h-4 mr-1 text-sky-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2 2v0"></path>
-              </svg>
+          <Icon
+            name="props/habitacion"
+            class="w-5 h-5 mr-2 text-sky-600 flex-shrink-0"
+          />
               2 dorm.
             </li>
             <li class="flex items-center">
-              <svg class="w-4 h-4 mr-1 text-sky-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3a2 2 0 002 2h4a2 2 0 002-2v-3"></path>
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9h18l-2 9H5L3 9z"></path>
-              </svg>
+          <Icon
+            name="props/banio"
+            class="w-5 h-5 mr-2 text-sky-600 flex-shrink-0"
+          />
               2 baños
             </li>
             <li class="flex items-center">
-              <svg class="w-4 h-4 mr-1 text-sky-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"></path>
-              </svg>
+          <Icon
+            name="props/superficie"
+            class="w-5 h-5 mr-2 text-sky-600 flex-shrink-0"
+          />
               283,50 m²
             </li>
           </ul>
@@ -118,10 +125,10 @@
           </h3>
           
           <p class="text-gray-600 text-sm mb-3 flex items-center">
-            <svg class="w-4 h-4 mr-1 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-            </svg>
+          <Icon
+            name="contact/domicilio"
+            class="w-5 h-5 mr-2 text-sky-600 flex-shrink-0"
+          />
             37 esquina 6, La Plata
           </p>
           
@@ -138,22 +145,24 @@
           <!-- Características -->
           <ul class="flex justify-between mb-4 text-sm text-gray-600">
             <li class="flex items-center">
-              <svg class="w-4 h-4 mr-1 text-sky-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2 2v0"></path>
-              </svg>
+          <Icon
+            name="props/habitacion"
+            class="w-5 h-5 mr-2 text-sky-600 flex-shrink-0"
+          />
               2 dorm.
             </li>
             <li class="flex items-center">
-              <svg class="w-4 h-4 mr-1 text-sky-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3a2 2 0 002 2h4a2 2 0 002-2v-3"></path>
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9h18l-2 9H5L3 9z"></path>
-              </svg>
+          <Icon
+            name="props/banio"
+            class="w-5 h-5 mr-2 text-sky-600 flex-shrink-0"
+          />
               1 baño
             </li>
             <li class="flex items-center">
-              <svg class="w-4 h-4 mr-1 text-sky-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"></path>
-              </svg>
+          <Icon
+            name="props/superficie"
+            class="w-5 h-5 mr-2 text-sky-600 flex-shrink-0"
+          />
               73 m²
             </li>
           </ul>
@@ -194,10 +203,10 @@
           </h3>
           
           <p class="text-gray-600 text-sm mb-3 flex items-center">
-            <svg class="w-4 h-4 mr-1 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-            </svg>
+          <Icon
+            name="contact/domicilio"
+            class="w-5 h-5 mr-2 text-sky-600 flex-shrink-0"
+          />
             Calle 15 e/ 162 y 162 N, Berisso
           </p>
           
@@ -208,22 +217,24 @@
           <!-- Características -->
           <ul class="flex justify-between mb-4 text-sm text-gray-600">
             <li class="flex items-center">
-              <svg class="w-4 h-4 mr-1 text-sky-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h4a1 1 0 011 1v5m-6 0V9a1 1 0 011-1h4a1 1 0 011 1v10"></path>
-              </svg>
+          <Icon
+            name="props/habitacion"
+            class="w-5 h-5 mr-2 text-sky-600 flex-shrink-0"
+          />
               2 dorm.
             </li>
             <li class="flex items-center">
-              <svg class="w-4 h-4 mr-1 text-sky-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3a2 2 0 002 2h4a2 2 0 002-2v-3"></path>
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9h18l-2 9H5L3 9z"></path>
-              </svg>
+          <Icon
+            name="props/banio"
+            class="w-5 h-5 mr-2 text-sky-600 flex-shrink-0"
+          />
               1 baño
             </li>
             <li class="flex items-center">
-              <svg class="w-4 h-4 mr-1 text-sky-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"></path>
-              </svg>
+          <Icon
+            name="props/superficie"
+            class="w-5 h-5 mr-2 text-sky-600 flex-shrink-0"
+          />
               150 m²
             </li>
           </ul>
@@ -242,6 +253,7 @@
           </div>
         </div>
       </div>
+    </div>
     </div>
   </div>
 </section>
