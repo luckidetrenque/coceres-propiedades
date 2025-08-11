@@ -1,0 +1,50 @@
+[
+  {
+    "id": "1",
+    "title": "Casa en City Bell",
+    "content": "Contenido del elemento 1",
+    "image": "/propiedad-1.jpg",
+    "location": "Calle 445 e/ Camino General Belgrano y calle 23, City Bell",
+    "features": {
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "area": "283,50"
+    },
+    "price": "130.000",
+    "link": "/propiedades/casa-familiar-city-bell",
+    "status": "Destacada",
+    "description": "Está hermosa casa cuenta con 2 habitaciones, una en Suite, y 2 baños; entrada de garaje para 2 vehículos y con una pileta de Fibra de Vidrio 2.20 m x 4.00 m. Además, tiene agua de pozo (Carga automática), gas natural, luz eléctrica, alarma particular marca Garnet, calefacción tiro balanceado en todos los ambientes, aire acondicionado (FrioCalor) en todos los ambientes y portón automático."
+  },
+  {
+    "id": "2",
+    "title": "Casa en Villa Elisa",
+    "content": "Contenido del elemento 2",
+    "image": "/propiedad-2.jpg",
+    "location": "Calle 12 e/ Camino General Belgrano y calle 45, Villa Elisa",
+    "features": {
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "area": "350"
+    },
+    "price": "150.000",
+    "link": "/propiedades/casa-familiar-villa-elisa",
+    "status": "Nueva",
+    "description": "Esta amplia casa cuenta con 3 habitaciones, una en Suite, y 2 baños; entrada de garaje para 3 vehículos y un hermoso jardín. Además, tiene agua de pozo, gas natural, luz eléctrica, calefacción por radiadores y aire acondicionado en todos los ambientes."
+  },
+  {
+    "id": "3",
+    "title": "Departamento en La Plata",
+    "content": "Contenido del elemento 3",
+    "image": "/propiedad-3.jpg",
+    "location": "Avenida 7 e/ Calle 50 y calle 51, La Plata",
+    "features": {
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "area": "90"
+    },
+    "price": "80.000",
+    "link": "/propiedades/departamento-la-plata",
+    "status": "Reformado",
+    "description": "Este moderno departamento cuenta con 2 habitaciones, un baño completo, cocina integrada y balcón. Está ubicado en una zona céntrica con fácil acceso a transporte público y comercios."
+  }
+]

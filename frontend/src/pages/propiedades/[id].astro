@@ -1,0 +1,94 @@
+---
+import type { GetStaticPaths } from "astro";
+import data from "../../data/data.json";
+export const getStaticPaths = (async () => {
+  return data.map((item) => ({
+    params: { id: item.id },
+    props: { item },
+  }));
+}) satisfies GetStaticPaths;
+
+const { item } = Astro.props;
+import { Icon } from "astro-icon/components";
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="Coceres Propiedades">
+  <main class="overflow-x-hidden">
+    <!-- Propiedad 1 -->
+    <div
+      class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+    >
+      <!-- Imagen -->
+      <div class="relative h-48 overflow-hidden">
+        <img
+          src="/propiedad-1.jpg"
+          alt="{item.title}"
+          class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+        />
+        <div
+          class="absolute top-3 left-3 bg-sky-600 text-white px-2 py-1 rounded text-sm font-medium"
+        >
+          {item.status}
+        </div>
+      </div>
+
+      <!-- Contenido -->
+      <div class="p-6">
+        <h3 class="text-xl font-bold text-gray-800 mb-2">
+          {item.title}
+        </h3>
+
+        <p class="text-gray-600 text-sm mb-3 flex items-center">
+          <Icon
+            name="contact/domicilio"
+            class="w-5 h-5 mr-2 text-sky-600 flex-shrink-0"
+          />
+          {item.location}
+        </p>
+
+        <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+          {item.description}
+        </p>
+
+        <!-- Características -->
+        <ul class="flex justify-between mb-4 text-sm text-gray-600">
+          <li class="flex items-center">
+            <Icon
+              name="props/habitacion"
+              class="w-5 h-5 mr-2 text-sky-600 flex-shrink-0"
+            />
+            {item.features.bedrooms} dormitorios
+          </li>
+          <li class="flex items-center">
+            <Icon
+              name="props/banio"
+              class="w-5 h-5 mr-2 text-sky-600 flex-shrink-0"
+            />
+            {item.features.bathrooms} baños
+          </li>
+          <li class="flex items-center">
+            <Icon
+              name="props/superficie"
+              class="w-5 h-5 mr-2 text-sky-600 flex-shrink-0"
+            />
+            {item.features.area} m²
+          </li>
+        </ul>
+
+        <!-- Precio y enlace -->
+        <div class="flex justify-between items-center">
+          <span class="text-2xl font-bold text-sky-600">
+            USD {item.price}
+          </span>
+          <a
+            href="/propiedades/{item.slug}"
+            class="bg-sky-600 text-white px-4 py-2 rounded hover:bg-sky-700 transition-colors duration-200 text-sm font-medium"
+          >
+            Más detalles
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>
